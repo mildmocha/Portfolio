@@ -24,6 +24,9 @@ const open = document.querySelector('.profileBtn')
 const open2 = document.querySelector('.projectBtn')
 const open3 = document.querySelector('.contactBtn')
 
+const projects = document.querySelectorAll('.projects')
+
+
 const closeBtns = document.querySelectorAll('.closeBtn');
 
 
@@ -39,9 +42,16 @@ open.addEventListener('click', () =>{
 })
 open2.addEventListener('click', () =>{
   modal2.classList.add('open')
+//  projects.forEach((project)=>{
+  //  const projectWidth = project.offsetWidth;
+   // const projectHeight = projectWidth*1.5142;
+    //project.style.height = `${projectHeight}px`;
+  //})
 })
 open3.addEventListener('click', () =>{
   modal3.classList.add('open')
 })
+
+
 
 
