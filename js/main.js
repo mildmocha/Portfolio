@@ -32,16 +32,20 @@ const closeBtns = document.querySelectorAll('.closeBtn');
 
 closeBtns.forEach((btn) => {
   btn.addEventListener('click', () => {
-    modal.classList.remove('open');
-    modal2.classList.remove('open');
+    modal.classList.add('out');
+    
+    modal2.classList.add('out');
+
     modal3.classList.remove('open');
   });
 });
 open.addEventListener('click', () =>{
   modal.classList.add('open')
+  modal.classList.remove('out')
 })
 open2.addEventListener('click', () =>{
   modal2.classList.add('open')
+  modal2.classList.remove('out')
 //  projects.forEach((project)=>{
   //  const projectWidth = project.offsetWidth;
    // const projectHeight = projectWidth*1.5142;

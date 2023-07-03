@@ -29,6 +29,9 @@ button {
 
   animation: anim 1s ease-in-out forwards;
 }
+.modal.out{
+  animation: animClose 1s ease-in-out forwards;
+}
 .modal2.open {
   animation: unfoldIn 1s ease-in-out forwards;
 
@@ -209,23 +212,46 @@ padding-top:10%;
 @keyframes anim {
   0% {
     z-index: 11;
-    \transform: skewX(5deg) translateX(-100%) scale(0.9);
+    transform: skewX(5deg) translateX(-100%) scale(0.95);
   }
   40% {
     
-    transform: skewX(5deg) translateX(0) scale(0.9);;
+    transform: skewX(5deg) translateX(0) scale(0.95);;
     width: 100%;
     z-index: 11;
     box-shadow: 10px 10px 5px #eaeaea;
   }
   60% {
-    transform: skewX(0deg) translateX(0) scale(0.9);;
+    transform: skewX(0deg) translateX(0) scale(0.95);;
     width: 100%;
     z-index: 11;
     box-shadow: 10px 10px 5px #eaeaea;
   }
 
   100% {
+  }
+}
+@keyframes animClose {
+  0% {
+    
+  }
+  40% {
+    
+    transform: skewX(5deg) translateX(0) scale(0.95);;
+    width: 100%;
+    z-index: 11;
+    box-shadow: 10px 10px 5px #eaeaea;
+  }
+  60% {
+    transform: skewX(5deg) translateX(0) scale(0.95);;
+    width: 100%;
+    z-index: 11;
+    box-shadow: 10px 10px 5px #eaeaea;
+  }
+
+  100% {
+    transform: skewX(5deg) translateX(100%) scale(0.95);
+    display: none;
   }
 }
 @keyframes modalAnimation {
@@ -309,4 +335,19 @@ padding-top:10%;
     /* 0.5 초간 세로 크기를 확대 */
     transform: scaleY(1) scaleX(1);
   }
+}
+.modal2.out {
+	transform: scale(1);
+	animation: unfoldOut 1s .3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+@keyframes unfoldOut {
+	0% {
+		transform: scale(1)
+	}
+	50% {
+		transform: scaleX(1) scaleY(0.005);
+	}
+	100% {
+		transform: scaleX(0) scaleY(0.005);
+	}
 }
