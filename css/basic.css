@@ -12,7 +12,9 @@ button {
   justify-content: space-between;
   align-items: center;
 }
-.modal,.modal2 ,.modal3 {
+.modal,
+.modal2,
+.modal3 {
   display: none;
   position: absolute;
   z-index: 1100;
@@ -22,17 +24,26 @@ button {
   left: 0;
   top: 0;
 }
-.modal.open{
+.modal.open {
   display: block;
-  
-  animation: anim 3s ease-in-out forwards;
+
+  animation: anim 1s ease-in-out forwards;
 }
+.modal2.open {
+  animation: unfoldIn 1s ease-in-out forwards;
+
+ }
 .modal.open,
-.modal2.open, .modal3.open {
+.modal2.open,
+.modal3.open {
   display: block;
 }
-.modal-profile {width: 60%; height: 100%; 
-margin: auto; background: #fff;}
+.modal-profile {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  background: #fff;
+}
 .card {
   width: 20%;
 
@@ -81,9 +92,13 @@ margin: auto; background: #fff;}
   z-index: 100;
 }
 
-
-
-.closeBtn{position: absolute; right: 5% ; top:5%; width: 100px; height: 100px;}
+.closeBtn {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 100px;
+  height: 100px;
+}
 
 .modal-front {
   background-size: cover;
@@ -91,27 +106,25 @@ margin: auto; background: #fff;}
   transform: rotateY(0deg);
   height: 100%;
 }
-.modal-profile{
+.modal-profile {
   position: relative;
 
-  box-sizing:inherit;
+  box-sizing: inherit;
   margin: auto;
   height: 98%;
   animation: width 0.1s linear forwards;
   background: #dee9c0;
-  
-  
 }
-.modal-project{ 
-
+.modal-project {
   position: relative;
-   margin: auto;
-height: 99%;
-   width:100%; 
-     background-color: antiquewhite;
-   
+  margin: auto;
+  height: 99%;
+  width: 100%;
+  background-color: antiquewhite;
 }
-.modal-project h1 { margin: 0; padding: 5%;
+.modal-project h1 {
+  margin: 0;
+  padding: 5%;
   text-align: center;
 }
 .card.flip .card-inner {
@@ -119,7 +132,6 @@ height: 99%;
 }
 
 .card-front.flip {
-  
   transform: rotateY(180deg);
 }
 /*
@@ -135,18 +147,18 @@ padding-top:10%;
   
 }
 */
-.projects { margin: 0 5px;
+.projects {
+  margin: 0 5px;
   border-radius: 10px;
   height: 640px;
 
-background: #ad9d9d;
-border:  solid white 10px;
-width: 100%;
-opacity: 0;
+  background: #ad9d9d;
+  border: solid white 10px;
+  width: 100%;
+  opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
-transition: 1s;
+  transition: 1s;
 }
-
 
 .project-wrap {
   display: flex;
@@ -154,9 +166,7 @@ transition: 1s;
   align-items: center;
 }
 
-
-.projects .content { 
-
+.projects .content {
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInContent 1s ease-in-out forwards;
@@ -184,57 +194,77 @@ transition: 1s;
   }
 }
 
+.projects a {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.projects img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes anim {
+  0% {
+    z-index: 11;
+    \transform: skewX(5deg) translateX(-100%) scale(0.9);
+  }
+  40% {
     
-  
-    .projects a { height: 100%; width: 100%; z-index: 2;}
+    transform: skewX(5deg) translateX(0) scale(0.9);;
+    width: 100%;
+    z-index: 11;
+    box-shadow: 10px 10px 5px #eaeaea;
+  }
+  60% {
+    transform: skewX(0deg) translateX(0) scale(0.9);;
+    width: 100%;
+    z-index: 11;
+    box-shadow: 10px 10px 5px #eaeaea;
+  }
 
-    .projects img {width: 100%;  height: 100%; object-fit: cover;}
-
-
-
-
-    @keyframes anim{
-    
-      0%  { z-index:11;\transform: skewX(5deg) translateX(-100%); }
-      40%   { transform: skewX(5deg) translateX(0);
-  width:100%; z-index:11; box-shadow: 10px 10px 5px #eaeaea;}
-      60%   { transform: skewX(0deg) translateX(0);
-  width:100%;z-index:11; box-shadow: 10px 10px 5px #eaeaea;}
-     
-      100%   { }
- }
+  100% {
+  }
+}
 @keyframes modalAnimation {
   0% {
-    transform:  scaleY(0.3); left: -25% ; top:-5%
+    transform: scaleY(0.3);
+    left: -25%;
+    top: -5%;
   }
   50% {
-    transform: scaleY(0.6)  ; left: -20% ;top:-5%;
-   }
+    transform: scaleY(0.6);
+    left: -20%;
+    top: -5%;
+  }
   100% {
-   
   }
 }
 @keyframes width {
-  0%{
+  0% {
     width: 0;
   }
-  50%{width:  0;}
-  60% {width:0;}
-  100%{
-    width: 70%;border-radius: 10px;
+  50% {
+    width: 0;
+  }
+  60% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+    border-radius: 10px;
     border: solid 10px white;
   }
-  
 }
 @keyframes projects {
-  0%{
-
+  0% {
   }
   100% {
     display: flex;
     justify-content: space-between;
   }
-  
 }
 @keyframes flipAnimation {
   65% {
@@ -251,21 +281,20 @@ transition: 1s;
   }
 }
 @keyframes width2 {
-  0%{
-        width: 0;
+  0% {
+    width: 0;
   }
   100% {
     width: 400px;
   }
 }
 @keyframes position {
-  0%{
+  0% {
     position: absolute;
   }
   100% {
     position: relative;
   }
-  
 }
 /*.modal2 {width: 100% ; height: 100%; position: absolute; left: 0; top: 0;  z-index: 100;} */
 @keyframes unfoldIn {
