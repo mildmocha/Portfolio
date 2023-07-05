@@ -40,7 +40,14 @@ opacity: 0;
 button {
   cursor: pointer;
 }
+@media (max-width:968px) {
+  body {overflow: auto;}
+  .card-container{ flex-direction: column;
+  justify-content: center;}
+  .card {width: 100%;}
+}
 .card-container {
+  
   margin: 5vh 0;
   padding: 15vh 0;
   display: flex;

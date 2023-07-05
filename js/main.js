@@ -20,7 +20,10 @@ document.addEventListener('click', ()=> {
   }, 300);
 ;
 })
-
+function isFullscreen() {
+  return document.fullscreenElement !== null || document.webkitFullscreenElement !== null || document.mozFullscreenElement !== null || document.msFullscreenElement !== null;
+}
+if (isFullscreen()){
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
@@ -29,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.height = `${cardHeight}px`;
   });
 });
+}
 
 const modal = document.querySelector('.modal')
 const modal2 = document.querySelector('.modal2')
@@ -80,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
       console.log(image)
 
       const modalContent =  document.querySelector('.projectModal');
-      modalContent.style.backgroundImage = `url(.${image})`;
+      modalContent.style.backgroundImage = `url(${image})`;
       modalContent.classList.add('open');
     });
   });
