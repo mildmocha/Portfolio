@@ -1,3 +1,26 @@
+document.addEventListener('click', ()=> {
+  const pf = document.querySelector('.pf');
+ pf.classList.add('open'); 
+ 
+ const cardFronts = document.querySelectorAll ('.card-front') 
+  const cards = document.querySelectorAll(".card");
+  setTimeout(() => {
+    cards.forEach((card, index) => {
+      setTimeout(() => {
+        card.classList.add("flip");
+      }, index * 500);
+    });
+  }, 300);
+  setTimeout(() => {
+    cardFronts.forEach((cardFronts) => {
+      setTimeout(() => {
+        cardFronts.classList.add("open");
+      });
+    });
+  }, 300);
+;
+})
+
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
@@ -6,16 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.height = `${cardHeight}px`;
   });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card");
-  setTimeout(() => {
-    cards.forEach((card, index) => {
-      setTimeout(() => {
-        card.classList.add("flip");
-      }, index * 500);
-    });
-  }, 200);
-});
+
 const modal = document.querySelector('.modal')
 const modal2 = document.querySelector('.modal2')
 const modal3 = document.querySelector('.modal3')
@@ -55,7 +69,22 @@ open2.addEventListener('click', () =>{
 open3.addEventListener('click', () =>{
   modal3.classList.add('open')
 })
+document.addEventListener('DOMContentLoaded', () => {
+  const projects = document.querySelectorAll('.projects');
+ 
 
+  projects.forEach((project) => {
+    project.addEventListener('click', () => {
+      const content = project.querySelector('.content');
+      const image = content.querySelector('img').src;
+      console.log(image)
+
+      const modalContent =  document.querySelector('.projectModal');
+      modalContent.style.backgroundImage = `url(.${image})`;
+      modalContent.classList.add('open');
+    });
+  });
+});
 
 
 
