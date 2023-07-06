@@ -75,6 +75,8 @@ open3.addEventListener('click', () =>{
 })
 document.addEventListener('DOMContentLoaded', () => {
   const projects = document.querySelectorAll('.projects');
+  const modalContent =  document.querySelectorAll('.projectModal');
+  const backBtns = document.querySelectorAll('.backBtn');
  
 
   projects.forEach((project) => {
@@ -82,13 +84,27 @@ document.addEventListener('DOMContentLoaded', () => {
       const content = project.querySelector('.content');
       const image = content.querySelector('img').src;
       console.log(image)
+modalContent.forEach((projectModal) =>{
+      projectModal.style.backgroundImage = `url(${image})`;
+      projectModal.classList.remove('out');
 
-      const modalContent =  document.querySelector('.projectModal');
-      modalContent.style.backgroundImage = `url(${image})`;
-      modalContent.classList.add('open');
+      projectModal.classList.add('open');
+})
+    });
+    backBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        modalContent.forEach((projectModal) =>{
+          
+          projectModal.classList.add('out');
+          
+        })
+      });
     });
   });
-});
 
+
+
+
+});
 
 

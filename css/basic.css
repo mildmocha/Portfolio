@@ -4,6 +4,7 @@ body {
   margin: 0 10%;
 }
 .pf {
+  padding-bottom: 56.25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -14,40 +15,47 @@ body {
   width: 100vw;
   height: 100%;
   background: black;
-  color:white
-  ;font-size: 50px;
+  color: white;
+  font-size: 50px;
+}
+.pf video {
+  z-index: -1;
 }
 .pf.open {
   animation-name: fadeIn2;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-
 }
-@keyframes fadeIn2 {
- 0%{
-  transform: scale(1);
-  opacity: 1;
- }
- 99%{
-transform: scale(4);
-opacity: 0;
 
- }
- 100%{
- transform: scale(0);
- }
+@keyframes fadeIn2 {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  99% {
+    transform: scale(4) translateY(5%);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 button {
   cursor: pointer;
 }
-@media (max-width:968px) {
-  body {overflow: auto;}
-  .card-container{ flex-direction: column;
-  justify-content: center;}
-  .card {width: 100%;}
+@media (max-width: 968px) {
+  body {
+    overflow: auto;
+  }
+  .card-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card {
+    width: 100%;
+  }
 }
 .card-container {
-  
   margin: 5vh 0;
   padding: 15vh 0;
   display: flex;
@@ -71,13 +79,12 @@ button {
 
   animation: anim 1s ease-in-out forwards;
 }
-.modal.out{
+.modal.out {
   animation: animClose 0.5s ease-out forwards;
 }
 .modal2.open {
-  animation: unfoldIn 1s ease-in-out forwards;
-
- }
+  animation: unfoldIn 0.5s ease-in-out forwards;
+}
 .modal.open,
 .modal2.open,
 .modal3.open {
@@ -129,7 +136,6 @@ button {
 }
 .card-front.open {
   animation: flipAnimation 2.3s ease-in-out forwards;
-
 }
 .card-back {
   border: solid 10px white;
@@ -140,6 +146,13 @@ button {
 }
 
 .closeBtn {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  width: 100px;
+  height: 100px;
+}
+.backBtn {
   position: absolute;
   right: 5%;
   top: 5%;
@@ -167,11 +180,12 @@ button {
   margin: auto;
   height: 99%;
   width: 100%;
-  background-color: antiquewhite;
+  background-color: rgb(2, 12, 31);
+  color: white;
 }
 .modal-project h1 {
   margin: 0;
-  padding: 5%;
+  padding: 3%;
   text-align: center;
 }
 .card.flip .card-inner {
@@ -205,6 +219,8 @@ padding-top:10%;
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
   transition: 1s;
+  z-index: 3;
+  overflow: hidden;
 }
 
 .project-wrap {
@@ -259,14 +275,13 @@ padding-top:10%;
     transform: skewX(5deg) translateX(-100%) scale(0.95);
   }
   40% {
-    
-    transform: skewX(5deg) translateX(0) scale(0.95);;
+    transform: skewX(5deg) translateX(0) scale(0.95);
     width: 100%;
     z-index: 11;
     box-shadow: 10px 10px 5px #eaeaea;
   }
   60% {
-    transform: skewX(0deg) translateX(0) scale(0.95);;
+    transform: skewX(0deg) translateX(0) scale(0.95);
     width: 100%;
     z-index: 11;
     box-shadow: 10px 10px 5px #eaeaea;
@@ -277,17 +292,15 @@ padding-top:10%;
 }
 @keyframes animClose {
   0% {
-    
   }
   40% {
-    
-    transform: skewX(5deg) translateX(0) scale(0.95);;
+    transform: skewX(5deg) translateX(0) scale(0.95);
     width: 100%;
     z-index: 11;
     box-shadow: 10px 10px 5px #eaeaea;
   }
   60% {
-    transform: skewX(5deg) translateX(0) scale(0.95);;
+    transform: skewX(5deg) translateX(0) scale(0.95);
     width: 100%;
     z-index: 11;
     box-shadow: 10px 10px 5px #eaeaea;
@@ -381,78 +394,77 @@ padding-top:10%;
   }
 }
 .modal2.out {
-	transform: scale(1);
-	animation: unfoldOut 1s .3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: scale(1);
+  animation: unfoldOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 @keyframes unfoldOut {
-	0% {
-		transform: scale(1)
-	}
-	50% {
-		transform: scaleX(1) scaleY(0.005);
-	}
-	100% {
-		transform: scaleX(0) scaleY(0.005);
-	}
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scaleX(1) scaleY(0.005);
+  }
+  100% {
+    transform: scaleX(0) scaleY(0.005);
+  }
 }
 
 /*    ---------------------------가져온 애니메이션 */
-@import url('https://fonts.googleapis.com/css?family=Lobster+Two');
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two");
 
 .container h1 {
-	
-	font-size: 5rem;
-	text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
-	color: #fcfbfb;
+  font-size: 5rem;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+  color: #fcfbfb;
 }
 
 .container {
   width: 50%;
-	position: relative;
-	z-index: 0;
-	background-color: #000000;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	min-height: 100vh;
-	overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  background-color:transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .pulse {
-	z-index: -1;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	width: 50%;
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
 }
 
 .pulse circle {
-	fill: #51ffd4;
-	transform: scale(0);
-	opacity: 0;
-	transform-origin: 50% 50%;
-	animation: pulse 2s cubic-bezier(.5,.5,0,1) infinite;
+  fill: #51ffd4;
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: 50% 50%;
+  animation: pulse 2s cubic-bezier(0.5, 0.5, 0, 1) infinite;
 }
 
 .pulse circle:nth-child(2) {
-	fill: #0059ff;
-	animation: pulse 2s 0.75s cubic-bezier(.5,.5,0,1) infinite;
+  fill: #0059ff;
+  animation: pulse 2s 0.75s cubic-bezier(0.5, 0.5, 0, 1) infinite;
 }
 
 .pulse circle:nth-child(3) {
-	fill: #e100ff;
-	animation: pulse 2s 1.5s cubic-bezier(.5,.5,0,1) infinite;
+  fill: #e100ff;
+  animation: pulse 2s 1.5s cubic-bezier(0.5, 0.5, 0, 1) infinite;
 }
 
 @keyframes pulse {
-	25% {
-		opacity: 0.4;
-	}
-	
-	100% {
-		transform: scale(1);
-	}
+  25% {
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*- ProjectModal*/
@@ -460,12 +472,49 @@ padding-top:10%;
   display: none;
   position: absolute;
   left: 0;
-  top:0;
+  top: 0;
   width: 100vw;
-  height: 100%;
-  
+  height: 101%;
+  background-size: cover;
 }
 .projectModal.open {
   display: block;
-  z-index: 100;
+  z-index: 4;
+  animation: flip-out-hor-top 0.5s reverse;
+}
+
+.projectModal.out {
+  animation: flip-out-hor-top2 0.5s forwards;
+}
+.projectReview {
+  margin: auto;
+  padding: 5%;
+  height: 100% ;
+  background: #f9faf859;
+  color: black;
+  font-size: 2rem;
+}
+@keyframes flip-out-hor-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+@keyframes flip-out-hor-top2 {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
 }
