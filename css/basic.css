@@ -1,3 +1,4 @@
+
 body {
   overflow: hidden;
   background: rgba(9, 27, 54, 0.712);
@@ -8,6 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
   position: absolute;
   left: 0;
   top: 0;
@@ -19,25 +21,22 @@ body {
   font-size: 50px;
 }
 .pf video {
+  flex: 3;
   z-index: -1;
 }
 .pf.open {
-  animation-name: fadeIn2;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  animation: fadeIn2 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 @keyframes fadeIn2 {
   0% {
-    transform: scale(1);
+    transform: translateZ(0) scale(1);
     opacity: 1;
   }
-  99% {
-    transform: scale(4) translateY(5%);
-    opacity: 0;
-  }
   100% {
-    transform: scale(0);
+    transform: translateZ(-1100px) translateY(20%) scale(2);
+    opacity: 0;
+    z-index: -2;
   }
 }
 button {
@@ -50,6 +49,8 @@ button {
   .card-container {
     flex-direction: column;
     justify-content: center;
+
+    z-index: 4;
   }
   .card {
     width: 100%;
@@ -61,6 +62,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  z-index: 4;
 }
 .modal,
 .modal2,
@@ -90,12 +93,7 @@ button {
 .modal3.open {
   display: block;
 }
-.modal-profile {
-  width: 60%;
-  height: 100%;
-  margin: auto;
-  background: #fff;
-}
+
 .card {
   width: 20%;
 
@@ -146,12 +144,16 @@ button {
 }
 
 .closeBtn {
+  border: none;
+  background: transparent;
   position: absolute;
   right: 5%;
-  top: 5%;
+  top: 4%;
   width: 100px;
   height: 100px;
 }
+.closeBtn i{font-size: 100px;
+color: white;}
 .backBtn {
   position: absolute;
   right: 5%;
@@ -167,13 +169,14 @@ button {
   height: 100%;
 }
 .modal-profile {
+  color:white;
   position: relative;
-
+width: 60%;
   box-sizing: inherit;
   margin: auto;
   height: 98%;
   animation: width 0.1s linear forwards;
-  background: #dee9c0;
+  background: #000000;
 }
 .modal-project {
   position: relative;
@@ -213,7 +216,7 @@ padding-top:10%;
   border-radius: 10px;
   height: 640px;
 
-  background: #ad9d9d;
+  background: #67656d;
   border: solid white 10px;
   width: 100%;
   opacity: 0;
@@ -222,18 +225,32 @@ padding-top:10%;
   z-index: 3;
   overflow: hidden;
 }
-
+span {
+  z-index: 2;
+  width: 100%;
+  padding: 5% 5% 5% 0;
+  display: inline-block;
+  font-size: 1rem;
+  font-family: "NanumSquare";
+  color:white;
+  
+}
 .project-wrap {
   display: flex;
   flex-direction: low;
   align-items: center;
+  z-index: 1;
+  font-family: "MaruBuri-Regular";
 }
 
 .projects .content {
+  height: 90%;
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInContent 1s ease-in-out forwards;
 }
+
+
 
 @keyframes fadeIn {
   0% {
@@ -266,8 +283,13 @@ padding-top:10%;
 .projects img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
 }
+.projectImg { width: 70%; height: 80%; object-fit: cover;
+  position: relative;
+}
+
 
 @keyframes anim {
   0% {
@@ -422,7 +444,7 @@ padding-top:10%;
   width: 50%;
   position: absolute;
   z-index: 0;
-  background-color:transparent;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -483,16 +505,22 @@ padding-top:10%;
   animation: flip-out-hor-top 0.5s reverse;
 }
 
-.projectModal.out {
+.projectModal.open.out {
   animation: flip-out-hor-top2 0.5s forwards;
 }
 .projectReview {
+  display: flex;
   margin: auto;
-  padding: 5%;
-  height: 100% ;
-  background: #f9faf859;
+  padding: 5% 2%;
+  height: 100%;
+  background: #1e1f1ca8 no-repeat;
   color: black;
   font-size: 2rem;
+}
+.projectReview p {
+ padding-left: 5%;
+ color: white;
+ font-family:"NanumSquare" ;
 }
 @keyframes flip-out-hor-top {
   0% {
@@ -513,8 +541,10 @@ padding-top:10%;
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(-1000px);
-    transform: translateY(-1000px);
+    -webkit-transform: translateX(-1500px);
+    transform: translateX(-1510px);
     opacity: 0;
+    display: none;
+    z-index: -1;
   }
 }

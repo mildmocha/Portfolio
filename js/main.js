@@ -79,23 +79,28 @@ document.addEventListener('DOMContentLoaded', () => {
   const backBtns = document.querySelectorAll('.backBtn');
  
 
-  projects.forEach((project) => {
+  projects.forEach((project, index) => {
     project.addEventListener('click', () => {
       const content = project.querySelector('.content');
       const image = content.querySelector('img').src;
-      console.log(image)
-modalContent.forEach((projectModal) =>{
+      console.log(image);
+  
+      const projectModal = modalContent[index];
       projectModal.style.backgroundImage = `url(${image})`;
       projectModal.classList.remove('out');
-
       projectModal.classList.add('open');
-})
+    });
+  
     });
     backBtns.forEach((btn) => {
       btn.addEventListener('click', () => {
         modalContent.forEach((projectModal) =>{
+         
           
           projectModal.classList.add('out');
+         
+
+          
           
         })
       });
@@ -105,6 +110,5 @@ modalContent.forEach((projectModal) =>{
 
 
 
-});
 
 
