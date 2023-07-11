@@ -42,22 +42,9 @@ body {
 button {
   cursor: pointer;
 }
-@media (max-width: 968px) {
-  body {
-    overflow: auto;
-  }
-  .card-container {
-    flex-direction: column;
-    justify-content: center;
 
-    z-index: 4;
-  }
-  .card {
-    width: 100%;
-  }
-}
 .card-container {
-  margin: 5vh 0;
+  margin:  0;
   padding: 20vh 0;
   display: flex;
   justify-content: space-between;
@@ -95,8 +82,9 @@ button {
 }
 
 .card {
-  width: 20%;
-
+  min-width: 275px;
+  width: 23%;
+ height: 600px;
   position: relative;
   perspective: 1000px;
 }
@@ -147,10 +135,10 @@ button {
   border: none;
   background: transparent;
   position: absolute;
-  right: 5%;
-  top: 4%;
-  width: 100px;
-  height: 100px;
+  right: 4%;
+  top: 3%;
+  width: 80px;
+  height: 80px;
   z-index: 1;
 }
 .closeBtn i {
@@ -233,7 +221,7 @@ button {
   border: 8px white solid;
 }
 .profileBase span {
-  width: 75%;color: black;
+  width: 75%;color: black; white-space: nowrap;
 }
 .profileAnswer {
   text-align: left;
@@ -384,7 +372,10 @@ span {
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInContent 1s ease-in-out forwards;
+
 }
+
+
 
 @keyframes fadeIn {
   0% {
@@ -421,6 +412,7 @@ span {
   object-fit: cover;
 }
 .projectImg {
+  margin : 0 5%;
   width: 70%;
   height: 80%;
   object-fit: cover;
@@ -642,6 +634,7 @@ span {
 .projectModal.open.out {
   animation: flip-out-hor-top2 0.5s forwards;
 }
+.projectModal img {object-fit: contain;}
 .projectReview {
   display: flex;
   margin: auto;
@@ -651,8 +644,10 @@ span {
   color: black;
   font-size: 2rem;
 }
-.projectReview p {
-  padding-left: 5%;
+
+
+.projectReview p { flex:1; margin-top: 5%;
+  
   color: white;
   font-family: "NanumSquare";
 }

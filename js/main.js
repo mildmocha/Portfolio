@@ -20,7 +20,7 @@ document.addEventListener('click', ()=> {
   }, 300);
 ;
 })
-function isFullscreen() {
+/*function isFullscreen() {
   return document.fullscreenElement !== null || document.webkitFullscreenElement !== null || document.mozFullscreenElement !== null || document.msFullscreenElement !== null;
 }
 if (isFullscreen()){
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 }
-
+*/
 const modal = document.querySelector('.modal')
 const modal2 = document.querySelector('.modal2')
 const modal3 = document.querySelector('.modal3')
