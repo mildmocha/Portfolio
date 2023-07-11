@@ -44,7 +44,7 @@ button {
 }
 
 .card-container {
-  margin:  0;
+  margin: 0;
   padding: 20vh 0;
   display: flex;
   justify-content: space-between;
@@ -84,7 +84,7 @@ button {
 .card {
   min-width: 275px;
   width: 23%;
- height: 600px;
+  height: 600px;
   position: relative;
   perspective: 1000px;
 }
@@ -139,7 +139,7 @@ button {
   top: 3%;
   width: 80px;
   height: 80px;
-  z-index: 1;
+  z-index: 2;
 }
 .closeBtn i {
   font-size: 70px;
@@ -162,12 +162,12 @@ button {
 .modal-profile {
   color: white;
   position: relative;
-
+  width: 100%;
   box-sizing: inherit;
 
   height: 100%;
   font-size: 3rem;
-  background: #17b5fb
+  background: #201b1b;
 }
 .modal-profile span {
   font-size: 2rem;
@@ -175,26 +175,34 @@ button {
 }
 .profileWrap {
   display: flex;
-  background: #070f3d8a;
+  background: #313131;
   height: 100%;
-  padding: 3%;
+  width: 100%;
+
   overflow: hidden;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .profile {
+  transform: none;
   font-weight: bold;
   text-align: center;
-  flex: 0.4;
+  flex: 0.25;
   height: 80%;
   border-radius: 20px;
   border: solid 10px rgb(252, 252, 252);
   background: #ffffff;
   padding: 1%;
 }
-.profileBg { background: #578af8; height: 100%; border-radius: 20px;}
+.profileBg {
+  background: #c1d6e4;
+  height: 100%;
+  border-radius: 20px;
+}
 .profile h3 {
   background: #ffffff9a;
-  color :black;
+  color: black;
   margin: 2% 0;
 }
 .profile img {
@@ -205,69 +213,87 @@ button {
   object-fit: contain;
   background: #fff;
   border: solid 5px rgb(141, 200, 240);
-  
 }
 
 .profileTxt {
-  margin :auto;
+  margin: auto;
   width: 90%;
   display: flex;
   margin-top: 5%;
   padding: 5% 0;
   background: #ffffffb9;
-  
+  font-family: sans-serif;
   height: 35%;
   border-radius: 50px 50px 0 0;
   border: 8px white solid;
 }
 .profileBase span {
-  width: 75%;color: black; white-space: nowrap;
+  width: 90%;
+  color: black;
+  white-space: nowrap;
+  font-size: 1.5rem;
 }
 .profileAnswer {
   text-align: left;
   font-weight: normal;
   width: 120%;
 }
-.profileAnswer span {color: black;}
+.profileAnswer span {
+  color: black;
+  font-size: 1.5rem;
+}
+.profileSpace {
+  flex: 0.1;
+}
 .skills {
   position: relative;
   box-sizing: border-box;
   margin-top: 1%;
-  height: 80%;
-  flex: 1;
-  
-  
+  height: 90%;
+  width: 100%;
+  flex: 0.6;
 }
-.skills h1 { margin: 2% 0; background: #f13800;
-padding:  0 5%; width: 100%; z-index: -1;}
+.skills h1 {
+  margin: 0;
+  margin-bottom: 5%;
+  border-bottom: 5px solid white;
+  padding: 0% 6%;
+  width: 130%;
+  z-index: 1;
+  position: relative;
+  font-size: 3rem;
+}
 .skill {
   width: 100%;
   display: flex;
-justify-content: center;
-  height: 50%;
+  justify-content: center;
+
   align-items: start;
-  
- 
+  margin: 0 auto;
   color: black;
+  text-align: center;
 }
 
 .skill div {
-  flex: 1;
   border-radius: 10px;
-  margin:0 auto;
+  margin: 0 auto;
   text-align: center;
-  height: 60%;
+  height: 40%;
+  z-index: 1;
+  width: 70%;
 }
 .skill div div {
+  flex: 1;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 85%;
-  height: 140%;
-  border-radius: 50%;
+  width: 60%;
+  height: 300px;
+  border-radius: 10px;
 
   background: white;
-  border: solid 20px rgb(253, 153, 3);
+  border: solid 10px rgb(253, 153, 3);
 }
 .skill img {
   width: 70%;
@@ -285,28 +311,28 @@ justify-content: center;
   color: white;
 }
 .skillSub {
-  padding-bottom: 10%;
+  margin-top: 5%;
   justify-content: center;
   display: flex;
   text-align: center;
-  height: 30%;
-  margin-bottom: 10%;
+  height: 100%;
 }
 .skillSub div {
   margin: 0 auto;
   flex: 1;
 }
 .skillSub div div {
-  border: solid rgb(212, 197, 197) 12px;
+  border: solid rgb(212, 197, 197) 5px;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 35%;
   background: white;
-  border-radius: 50%;
-  width: 70%;
+
+  width: 60%;
   flex: 1;
   text-align: center;
+  border-radius: 10px;
 }
 .skillSub img {
   width: 80%;
@@ -323,33 +349,51 @@ justify-content: center;
 .card-front.flip {
   transform: rotateY(180deg);
 }
-/*
-.project-wrap {
-  
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-padding-top:10%;  
+
+.projectC {
+  position: relative;
+  flex: 1;
+  transform-style: preserve-3d;
+  transition: 1s;
+  transform: none;
+
 }
-.projects.expand {
-  
+.projectC.flip {
+  transform: rotateY(180deg);
 }
-*/
 .projects {
+  
+
+
   margin: 0 5px;
   border-radius: 10px;
-  height: 640px;
-
+  height: 700px;
+  position: relative;
+  transform-style: preserve-3d;
   background: #67656d;
   border: solid white 10px;
   width: 100%;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
   transition: 1s;
-  z-index: 3;
-  overflow: hidden;
+  z-index: 13;
+  transform: scaleX(-1);
 }
+.projects::before {
+  
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+top: 0px;
+left:0px;
+content: "";
+background: url(../img/card1.jpg) center center no-repeat;;
+  background-size: cover;
+  z-index: 1;
+  
+}
+
 span {
   z-index: 2;
   width: 100%;
@@ -368,14 +412,12 @@ span {
 }
 
 .projects .content {
+  
   height: 90%;
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInContent 1s ease-in-out forwards;
-
 }
-
-
 
 @keyframes fadeIn {
   0% {
@@ -412,7 +454,7 @@ span {
   object-fit: cover;
 }
 .projectImg {
-  margin : 0 5%;
+  margin: 0 5%;
   width: 70%;
   height: 80%;
   object-fit: cover;
@@ -477,16 +519,14 @@ span {
 }
 @keyframes width {
   0% {
-    transform: translateX(-500%)
+    transform: translateX(-500%);
   }
   50% {
-    
   }
   60% {
-   
   }
   100% {
-    transform: translateX(0)
+    transform: translateX(0);
   }
 }
 @keyframes projects {
@@ -634,7 +674,9 @@ span {
 .projectModal.open.out {
   animation: flip-out-hor-top2 0.5s forwards;
 }
-.projectModal img {object-fit: contain;}
+.projectModal img {
+  object-fit: contain;
+}
 .projectReview {
   display: flex;
   margin: auto;
@@ -645,9 +687,10 @@ span {
   font-size: 2rem;
 }
 
+.projectReview p {
+  flex: 1;
+  margin-top: 5%;
 
-.projectReview p { flex:1; margin-top: 5%;
-  
   color: white;
   font-family: "NanumSquare";
 }
