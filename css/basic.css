@@ -204,7 +204,7 @@ button {
 .profile h3 {
   background: #ffffff;
   color: black;
-  margin-top: 4%;
+  margin-top: 10%;
   font-family: cursive;
 }
 .profile img {
@@ -229,16 +229,14 @@ button {
   border: 8px white solid;
 }
 .profileTxt span {
-  font-family: DoveMayo_gothic ;
+  font-family: DoveMayo_gothic;
   font-size: 1.6rem;
   color: black;
-
 }
 .profileBase span {
   width: 90%;
-  
+
   white-space: nowrap;
- 
 }
 .profileAnswer {
   text-align: left;
@@ -246,8 +244,6 @@ button {
   width: 120%;
 }
 .profileAnswer span {
-  
-  
 }
 .profileSpace {
   flex: 0.1;
@@ -298,21 +294,22 @@ button {
   width: 60%;
   height: 350px;
   border-radius: 10px;
-flex-direction: column;
+  flex-direction: column;
   background: white;
   border: solid 10px rgb(253, 153, 3);
 }
 .skill img {
-  flex:0.6;
+  flex: 0.6;
   width: 70%;
   margin-top: 30%;
 }
 .skill span {
   margin-bottom: 5%;
-  color: black; font-family: cursive;
-  border-top: solid rgb(253, 153, 3) 2px ;
-  border-bottom: solid rgb(253, 153, 3) 2px ;
-font-weight: bold;
+  color: black;
+  font-family: cursive;
+  border-top: solid rgb(253, 153, 3) 2px;
+  border-bottom: solid rgb(253, 153, 3) 2px;
+  font-weight: bold;
 }
 .modal-project {
   position: relative;
@@ -368,18 +365,13 @@ font-weight: bold;
   transform-style: preserve-3d;
   transition: 1s;
   transform: none;
-
 }
 .projectC.flip {
   transform: rotateY(180deg);
 }
 .projects {
-  
-
-
-  
   border-radius: 10px;
-  height: 600px;
+  height: 650px;
   position: relative;
   transform-style: preserve-3d;
   background: #67656d;
@@ -389,30 +381,37 @@ font-weight: bold;
   z-index: 13;
   transform: scaleX(-1);
 }
+.projects span {
+  font-size: 1.1rem;
+  font-family: "NanumSquare";
+  background: #1b1919;
+  padding: 5% 0;
+  font-weight: bold;
+}
+
 .projects::before {
-  
   backface-visibility: hidden;
   transform-style: preserve-3d;
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
-top: 0px;
-left:0px;
-content: "";
-background: url(../img/card1.jpg) center center no-repeat;;
+  top: 0px;
+  left: 0px;
+  content: "";
+  background: url(../img/card1.jpg) center center no-repeat;
   background-size: cover;
   z-index: 1;
-  
 }
-
+.projects > div {
+  height: 565px;
+}
 span {
   z-index: 2;
   width: 100%;
-  padding: 5% 5% 5% 0;
+
   display: inline-block;
   font-size: 1rem;
-  font-family: "NanumSquare";
   color: white;
 }
 .project-wrap {
@@ -422,16 +421,21 @@ span {
   z-index: 1;
   font-family: "MaruBuri-Regular";
   justify-content: space-between;
+  padding: 0 1%;
 }
 
 .projects .content {
-  
+  box-sizing: border-box;
   height: 90%;
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInContent 1s ease-in-out forwards;
 }
+.content img {
+  box-sizing: border-box;
 
+  width: 100%;
+}
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -466,14 +470,34 @@ span {
   display: block;
   object-fit: cover;
 }
+
+.link {
+  width: 50%;
+  overflow: hidden;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.link img {width: 100%;
+  height: 100%;}
+.link a {display: block; z-index: 10; flex: 1;}
+.reviewTxt {
+  flex: 1;
+}
 .projectImg {
   margin: 0 5%;
-  width: 70%;
-  height: 80%;
+
   object-fit: cover;
   position: relative;
 }
-
+.link .megaboxImg {
+  width: 70%; 
+  height: 90%;
+  object-fit: contain;
+}
+.reactImg {
+  
+}
 @keyframes anim {
   0% {
     z-index: 11;
@@ -688,7 +712,7 @@ span {
   animation: flip-out-hor-top2 0.5s forwards;
 }
 .projectModal img {
-  object-fit: contain;
+  
 }
 .projectReview {
   display: flex;
