@@ -189,9 +189,9 @@ button {
   font-weight: bold;
   text-align: center;
   flex: 0.25;
-  height: 80%;
+  height: 84%;
   border-radius: 20px;
-  border: solid 10px rgb(252, 252, 252);
+  border: solid 5px rgb(252, 252, 252);
   background: #ffffff;
   padding: 1%;
 }
@@ -199,11 +199,13 @@ button {
   background: #c1d6e4;
   height: 100%;
   border-radius: 20px;
+  border: solid 3px black;
 }
 .profile h3 {
-  background: #ffffff9a;
+  background: #ffffff;
   color: black;
-  margin: 2% 0;
+  margin-top: 4%;
+  font-family: cursive;
 }
 .profile img {
   display: inline-block;
@@ -222,16 +224,21 @@ button {
   margin-top: 5%;
   padding: 5% 0;
   background: #ffffffb9;
-  font-family: sans-serif;
   height: 35%;
   border-radius: 50px 50px 0 0;
   border: 8px white solid;
 }
+.profileTxt span {
+  font-family: DoveMayo_gothic ;
+  font-size: 1.6rem;
+  color: black;
+
+}
 .profileBase span {
   width: 90%;
-  color: black;
+  
   white-space: nowrap;
-  font-size: 1.5rem;
+ 
 }
 .profileAnswer {
   text-align: left;
@@ -239,8 +246,8 @@ button {
   width: 120%;
 }
 .profileAnswer span {
-  color: black;
-  font-size: 1.5rem;
+  
+  
 }
 .profileSpace {
   flex: 0.1;
@@ -248,14 +255,14 @@ button {
 .skills {
   position: relative;
   box-sizing: border-box;
-  margin-top: 1%;
+  margin-top: 0%;
   height: 90%;
   width: 100%;
   flex: 0.6;
 }
 .skills h1 {
   margin: 0;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   border-bottom: 5px solid white;
   padding: 0% 6%;
   width: 130%;
@@ -287,20 +294,25 @@ button {
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   width: 60%;
-  height: 300px;
+  height: 350px;
   border-radius: 10px;
-
+flex-direction: column;
   background: white;
   border: solid 10px rgb(253, 153, 3);
 }
 .skill img {
+  flex:0.6;
   width: 70%;
-  object-fit: cover;
+  margin-top: 30%;
 }
 .skill span {
-  display: none;
+  margin-bottom: 5%;
+  color: black; font-family: cursive;
+  border-top: solid rgb(253, 153, 3) 2px ;
+  border-bottom: solid rgb(253, 153, 3) 2px ;
+font-weight: bold;
 }
 .modal-project {
   position: relative;
@@ -339,7 +351,7 @@ button {
 }
 .modal-project h1 {
   margin: 0;
-  padding: 3%;
+  padding: 4%;
   text-align: center;
 }
 .card.flip .card-inner {
@@ -352,7 +364,7 @@ button {
 
 .projectC {
   position: relative;
-  flex: 1;
+  width: 18%;
   transform-style: preserve-3d;
   transition: 1s;
   transform: none;
@@ -365,9 +377,9 @@ button {
   
 
 
-  margin: 0 5px;
+  
   border-radius: 10px;
-  height: 700px;
+  height: 600px;
   position: relative;
   transform-style: preserve-3d;
   background: #67656d;
@@ -409,6 +421,7 @@ span {
   align-items: center;
   z-index: 1;
   font-family: "MaruBuri-Regular";
+  justify-content: space-between;
 }
 
 .projects .content {
