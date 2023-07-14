@@ -57,7 +57,7 @@ closeBtns.forEach((btn) => {
   abc.classList.remove("flip");
  })
 
-    modal3.classList.remove("open");
+    modal3.classList.add("out");
     contactsFlip.forEach((abc)=>{
       abc.classList.remove("flip");
      })
@@ -100,8 +100,8 @@ setTimeout(()=>{
       abc.classList.add("flip");
     } )
      // 딜레이를 적용할 시간 (밀리초 단위로 설정)
-  });
-},300);
+  },400);
+});
 document.addEventListener("DOMContentLoaded", () => {
   const projects = document.querySelectorAll(".projects");
   const modalContent = document.querySelectorAll(".projectModal");
