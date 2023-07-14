@@ -38,6 +38,7 @@ const modal2 = document.querySelector(".modal2");
 const modal3 = document.querySelector(".modal3");
 
 const projectsFlip = document.querySelectorAll(".projectC");
+const contactsFlip =document. querySelectorAll(".contactWrap");
 
 const open = document.querySelector(".profileBtn");
 const open2 = document.querySelector(".projectBtn");
@@ -57,12 +58,20 @@ closeBtns.forEach((btn) => {
  })
 
     modal3.classList.remove("open");
+    contactsFlip.forEach((abc)=>{
+      abc.classList.remove("flip");
+     })
+    
   });
 });
+
 open.addEventListener("click", () => {
   modal.classList.add("open");
   modal.classList.remove("out");
 });
+
+
+
 open2.addEventListener("click", () => {
   modal2.classList.add("open");
   modal2.classList.remove("out");
@@ -82,8 +91,17 @@ setTimeout(()=>{
 //})
 
 open3.addEventListener("click", () => {
+  console.log('1')
   modal3.classList.add("open");
-});
+  modal3.classList.remove("out");
+setTimeout(()=>{
+  contactsFlip.forEach((abc) => {
+    
+      abc.classList.add("flip");
+    } )
+     // 딜레이를 적용할 시간 (밀리초 단위로 설정)
+  });
+},300);
 document.addEventListener("DOMContentLoaded", () => {
   const projects = document.querySelectorAll(".projects");
   const modalContent = document.querySelectorAll(".projectModal");
@@ -93,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     project.addEventListener("click", () => {
       const content = project.querySelector(".content");
       const image = content.querySelector("img").src;
-      console.log(image);
+      
 
       const projectModal = modalContent[index];
       projectModal.style.backgroundImage = `url(${image})`;
