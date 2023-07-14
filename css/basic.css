@@ -488,7 +488,7 @@ span {
   font-weight: bold;
   text-align: center;
   background-color: #2d2d2d;
-  border-radius: 20px;
+  border-radius: 25px;
   color: white;
   z-index: 10;
   flex: 1;
@@ -515,7 +515,11 @@ span {
 }
 
 .projectReview .reviewTxt > P {
+  color: black;
+  background: #ffffff8e;
   flex: 1;
+  font-family: "NanumSquare";
+  font-weight: bold;
 }
 .projectImg {
   margin: 0 5%;
@@ -881,7 +885,7 @@ a {
   animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 .modal3.out {
-  animation: blowUpContent 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  animation: slideDownLarge 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
 @keyframes blowUpModal {
   0% {
@@ -891,18 +895,11 @@ a {
     transform: scale(1);
   }
 }
-@keyframes blowUpContent {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  99.9% {
-    transform: scale(2);
-    opacity: 0;
-  }
-  /* 마지막에 숨김 처리 */
-  100% {
-    transform: scale(0);
-  }
+@keyframes slideDownLarge {
+0% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(-100%);
+	}
 }
