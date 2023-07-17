@@ -109,12 +109,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   projects.forEach((project, index) => {
     project.addEventListener("click", () => {
-      const content = project.querySelector(".content");
+      const projectModal = modalContent[index];
+
+      /*const content = project.querySelector(".content");
       const image = content.querySelector("img").src;
       
 
-      const projectModal = modalContent[index];
       projectModal.style.backgroundImage = `url(${image})`;
+      */
       projectModal.classList.remove("out");
       projectModal.classList.add("open");
     });
