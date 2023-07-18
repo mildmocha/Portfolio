@@ -22,6 +22,28 @@ body {
   font-size: 50px;
 }
 
+.pf h4 {
+  position: absolute;
+  left: 50%;
+  bottom: 55%;
+  font-size: 2rem;
+  transform: translatex(-50%);
+  z-index: 2;
+  animation: twinkle 2s ease-in-out  infinite forwards ;
+}
+@keyframes twinkle{
+  0%{
+    opacity: 0.1;
+  }
+  50% {
+         opacity: 0.7;
+  }
+  100% { opacity: 0.1;
+
+  }
+
+}
+
 .pf video {
   flex: 3;
   z-index: -1;
@@ -164,7 +186,7 @@ button {
   background: transparent;
   position: absolute;
   right: 4%;
-  top: 3%;
+  top: 2%;
   width: 80px;
   height: 80px;
   z-index: 2;
@@ -172,7 +194,7 @@ button {
 
 .backBtn i {
   font-size: 40px;
-  
+
 }
 
 .modal-front {
@@ -354,7 +376,7 @@ button {
 .modal-project {
   position: relative;
   margin: auto;
-  height: 99%;
+  height: 100%;
   width: 100%;
   background-color: rgb(4, 15, 34);
   color: white;
@@ -393,7 +415,10 @@ button {
 
 .modal-project h1 {
   margin: 0;
-  padding-top: 2.5%;
+  font-size: 3rem;
+
+  line-height: 1;
+  padding-top: 4.5%;
   padding-bottom: 4%;
   text-align: center;
 
@@ -421,7 +446,7 @@ button {
 
 .projects {
   border-radius: 10px;
-  height: 650px;
+  height: 600px;
   position: relative;
   transform-style: preserve-3d;
   background: #67656d;
@@ -475,7 +500,7 @@ span {
   z-index: 1;
   font-family: "MaruBuri-Regular";
   justify-content: space-between;
-  padding: 0 1%;
+  padding: 0 7%;
 }
 
 .modal-project h2 {
@@ -483,16 +508,18 @@ span {
 
   padding-left: 0.5%;
   margin-top: 20px;
- margin-bottom: 1%; 
- color: black;
- font-size: 1.5rem;
- font-family: "MaruBuri";
- font-weight: bold;
+  margin-bottom: 1%;
+  color: black;
+  font-size: 1.5rem;
+  font-family: "MaruBuri";
+  font-weight: bold;
 
-line-height: 1.5rem;
+  line-height: 1.5rem;
 
 }
-h2 i { padding-left: 3%;
+
+h2 i {
+  padding-left: 3%;
   color: rgb(0, 0, 0);
 }
 
@@ -607,7 +634,7 @@ h2 i { padding-left: 3%;
   padding: 0 5%;
   color: rgb(0, 0, 0);
   margin-top: 5%;
-line-height: 2;
+  line-height: 2;
   flex: 1.1;
   font-family: 'MaruBuri';
 
@@ -795,10 +822,12 @@ line-height: 2;
 /*    ---------------------------가져온 애니메이션 */
 @import url("https://fonts.googleapis.com/css?family=Lobster+Two");
 
+
 .container h1 {
   font-size: 5rem;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
   color: #fcfbfb;
+
 }
 
 .container {
@@ -811,6 +840,7 @@ line-height: 2;
   justify-content: center;
   min-height: 100vh;
   overflow: hidden;
+
 }
 
 .pulse {
@@ -942,7 +972,7 @@ line-height: 2;
 
 /* Contact */
 .modal3 .modal-front {
-  background-color: #9dd798;
+  background-color: #8173d8;
 }
 
 .modal-contact {
@@ -981,9 +1011,11 @@ line-height: 2;
   z-index: 13;
   transform: scaleX(-1);
 }
-.contactWrap:first-child >.contactCard {
+
+.contactWrap:first-child>.contactCard {
   background: #f7f7f7;
 }
+
 .contactWrap:first-child>.contactCard h3 {
   margin-top: 160px;
 }
