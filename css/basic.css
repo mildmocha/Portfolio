@@ -147,15 +147,15 @@ button {
   border: none;
   background: transparent;
   position: absolute;
-  right: 4%;
-  top: 3%;
+  right: 6.5%;
+  top: 4%;
   width: 80px;
   height: 80px;
   z-index: 2;
 }
 
 .closeBtn i {
-  font-size: 70px;
+  font-size: 50px;
   color: white;
 }
 
@@ -171,8 +171,8 @@ button {
 }
 
 .backBtn i {
-  font-size: 70px;
-  color: rgb(253, 253, 253), 255;
+  font-size: 40px;
+  
 }
 
 .modal-front {
@@ -394,7 +394,7 @@ button {
 .modal-project h1 {
   margin: 0;
   padding-top: 2.5%;
-  padding-bottom:  4%;
+  padding-bottom: 4%;
   text-align: center;
 
 }
@@ -596,7 +596,9 @@ h2 i { padding-left: 3%;
 .projectReview .reviewTxt>h1 {
   padding-bottom: 2%;
   padding-top: 0;
-  color: white;
+  padding-left: 5%;
+  text-align: left;
+  color: rgb(0, 0, 0);
   font-family: 'MaruBuri';
   width: 100%;
 }
@@ -605,7 +607,7 @@ h2 i { padding-left: 3%;
   padding: 0 5%;
   color: rgb(0, 0, 0);
   margin-top: 5%;
-
+line-height: 2;
   flex: 1.1;
   font-family: 'MaruBuri';
 
@@ -971,21 +973,21 @@ h2 i { padding-left: 3%;
   height: 650px;
   position: relative;
   transform-style: preserve-3d;
-  background: #f7f7f7;
+  background: #fff;
+
   border: solid rgb(0, 0, 0) 10px;
   width: 100%;
   transition: 1s;
   z-index: 13;
   transform: scaleX(-1);
 }
-
-.contactWrap:last-child>.contactCard {
-  background: #fff;
+.contactWrap:first-child >.contactCard {
+  background: #f7f7f7;
+}
+.contactWrap:first-child>.contactCard h3 {
+  margin-top: 160px;
 }
 
-.contactWrap:last-child>.contactCard h3 {
-  margin-top: 140px;
-}
 
 .contactCard::before {
   backface-visibility: hidden;
@@ -1017,7 +1019,7 @@ a {
 }
 
 .contactCard h3 {
-  margin-top: 160px;
+  margin-top: 140px;
   padding: 15px 0;
   color: black;
   border-top: 3px solid black;
