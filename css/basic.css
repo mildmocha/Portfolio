@@ -4,6 +4,7 @@ body {
   background: rgba(9, 27, 54, 0.712);
   margin: 0 10%;
 }
+
 .pf {
   padding-bottom: 56.25%;
   display: flex;
@@ -20,10 +21,12 @@ body {
   color: white;
   font-size: 50px;
 }
+
 .pf video {
   flex: 3;
   z-index: -1;
 }
+
 .pf.open {
   animation: fadeIn2 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
@@ -33,12 +36,14 @@ body {
     transform: translateZ(0) scale(1);
     opacity: 1;
   }
+
   100% {
     transform: translateZ(-1100px) translateY(20%) scale(2);
     opacity: 0;
     z-index: -2;
   }
 }
+
 button {
   cursor: pointer;
 }
@@ -52,6 +57,7 @@ button {
 
   z-index: 4;
 }
+
 .modal,
 .modal2,
 .modal3 {
@@ -64,17 +70,21 @@ button {
   left: 0;
   top: 0;
 }
+
 .modal.open {
   display: block;
 
   animation: anim 1s ease-in-out forwards;
 }
+
 .modal.out {
   animation: animClose 0.5s ease-out forwards;
 }
+
 .modal2.open {
   animation: unfoldIn 0.5s ease-in-out forwards;
 }
+
 .modal.open,
 .modal2.open,
 .modal3.open {
@@ -120,9 +130,11 @@ button {
   background-size: cover;
   background-color: #6b3a3a;
 }
+
 .card-front.open {
   animation: flipAnimation 2.3s ease-in-out forwards;
 }
+
 .card-back {
   border: solid 10px white;
   border-radius: 10px;
@@ -141,10 +153,12 @@ button {
   height: 80px;
   z-index: 2;
 }
+
 .closeBtn i {
   font-size: 70px;
   color: white;
 }
+
 .backBtn {
   border: none;
   background: transparent;
@@ -155,9 +169,10 @@ button {
   height: 80px;
   z-index: 2;
 }
+
 .backBtn i {
   font-size: 70px;
-  color: rgb(253, 253, 253), 255);
+  color: rgb(253, 253, 253), 255;
 }
 
 .modal-front {
@@ -166,6 +181,7 @@ button {
   transform: rotateY(0deg);
   height: 100%;
 }
+
 .modal-profile {
   color: white;
   position: relative;
@@ -176,10 +192,12 @@ button {
   font-size: 3rem;
   background: #201b1b;
 }
+
 .modal-profile span {
   font-size: 2rem;
   padding: 0;
 }
+
 .profileWrap {
   display: flex;
   background: #313131;
@@ -202,18 +220,21 @@ button {
   background: #ffffff;
   padding: 1%;
 }
+
 .profileBg {
   background: #c1d6e4;
   height: 100%;
   border-radius: 20px;
   border: solid 3px black;
 }
+
 .profile h3 {
   background: #ffffff;
   color: black;
   margin-top: 10%;
   font-family: cursive;
 }
+
 .profile img {
   display: inline-block;
   margin-top: 5%;
@@ -235,26 +256,31 @@ button {
   border-radius: 50px 50px 0 0;
   border: 8px white solid;
 }
+
 .profileTxt span {
-  font-family: DoveMayo_gothic;
+  font-family: 'MaruBuri';
   font-size: 1.6rem;
   color: black;
 }
+
 .profileBase span {
   width: 90%;
 
   white-space: nowrap;
 }
+
 .profileAnswer {
   text-align: left;
   font-weight: normal;
   width: 120%;
 }
-.profileAnswer span {
-}
+
+.profileAnswer span {}
+
 .profileSpace {
   flex: 0.1;
 }
+
 .skills {
   position: relative;
   box-sizing: border-box;
@@ -263,6 +289,7 @@ button {
   width: 100%;
   flex: 0.6;
 }
+
 .skills h1 {
   margin: 0;
   margin-bottom: 3%;
@@ -273,6 +300,7 @@ button {
   position: relative;
   font-size: 3rem;
 }
+
 .skill {
   width: 100%;
   display: flex;
@@ -292,6 +320,7 @@ button {
   z-index: 1;
   width: 70%;
 }
+
 .skill div div {
   flex: 1;
   text-align: center;
@@ -305,11 +334,13 @@ button {
   background: white;
   border: solid 10px rgb(253, 153, 3);
 }
+
 .skill img {
   flex: 0.6;
   width: 70%;
   margin-top: 30%;
 }
+
 .skill span {
   margin-bottom: 5%;
   color: black;
@@ -318,6 +349,7 @@ button {
   border-bottom: solid rgb(253, 153, 3) 2px;
   font-weight: bold;
 }
+
 .modal-project {
   position: relative;
   margin: auto;
@@ -326,6 +358,7 @@ button {
   background-color: rgb(4, 15, 34);
   color: white;
 }
+
 .skillSub {
   margin-top: 5%;
   justify-content: center;
@@ -333,10 +366,12 @@ button {
   text-align: center;
   height: 100%;
 }
+
 .skillSub div {
   margin: 0 auto;
   flex: 1;
 }
+
 .skillSub div div {
   border: solid rgb(212, 197, 197) 5px;
   display: flex;
@@ -350,9 +385,11 @@ button {
   text-align: center;
   border-radius: 10px;
 }
+
 .skillSub img {
   width: 80%;
 }
+
 .modal-project h1 {
   margin: 0;
   padding: 4%;
@@ -375,9 +412,11 @@ button {
   transition: 1s;
   transform: none;
 }
+
 .projectC.flip {
   transform: rotateY(180deg);
 }
+
 .projects {
   border-radius: 10px;
   height: 650px;
@@ -390,6 +429,7 @@ button {
   z-index: 13;
   transform: scaleX(-1);
 }
+
 .projects span {
   font-size: 1.1rem;
   font-family: "NanumSquare";
@@ -412,9 +452,11 @@ button {
   background-size: cover;
   z-index: 1;
 }
-.projects > div {
+
+.projects>div {
   height: 565px;
 }
+
 span {
   z-index: 2;
   width: 100%;
@@ -423,6 +465,7 @@ span {
   font-size: 1rem;
   color: white;
 }
+
 .project-wrap {
   display: flex;
   flex-direction: low;
@@ -440,16 +483,19 @@ span {
   transform: translateY(50px);
   animation: fadeInContent 1s ease-in-out forwards;
 }
+
 .content img {
   box-sizing: border-box;
 
   width: 100%;
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translateY(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -461,6 +507,7 @@ span {
     opacity: 0;
     transform: translateY(50px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -487,12 +534,16 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  filter: drop-shadow(0px 0px 3px);
 }
+
 .link img {
   width: 100%;
   height: 100%;
 }
+
 .reviewTxt a {
+  margin-right: 2%;
   display: block;
   font-weight: bold;
   text-align: center;
@@ -500,16 +551,18 @@ span {
   border-radius: 25px;
   color: white;
   z-index: 10;
-  flex: 1;
-  width: 20%;
+
+  width: 25%;
   font-size: 1.6rem;
   margin-top: 10px;
-  padding: 1% 0%;
+  padding: 2% 1%;
   text-decoration: none;
 }
+
 .reviewTxt a:hover {
   background-color: #5c5c5c;
 }
+
 .reviewTxt {
   margin-left: 3%;
   height: 670px;
@@ -518,15 +571,16 @@ span {
   justify-content: center;
   flex: 1;
 }
-.projectReview .reviewTxt > h1 {
+
+.projectReview .reviewTxt>h1 {
   padding-bottom: 2%;
   padding-top: 0;
   color: white;
   font-family: 'MaruBuri';
-width: 100%;
+  width: 100%;
 }
 
-.projectReview .reviewTxt > P {
+.projectReview .reviewTxt>P {
   padding: 0 5%;
   color: rgb(0, 0, 0);
   margin-top: 5%;
@@ -537,32 +591,41 @@ width: 100%;
   font-weight: bold;
 
 }
+
 .projectImg {
   margin: 0 5%;
 
   object-fit: cover;
   position: relative;
 }
+
 .link .megaboxImg {
   background: black;
-  padding: 0 10% ;
+  padding: 0 10%;
   width: 65%;
   height: 100%;
   object-fit: cover;
 }
-.reactImg {
+
+.linkURL {
+  display: flex;
 }
+
+.reactImg {}
+
 @keyframes anim {
   0% {
     z-index: 11;
     transform: skewX(5deg) translateX(-100%) scale(0.95);
   }
+
   40% {
     transform: skewX(5deg) translateX(0) scale(0.95);
     width: 100%;
     z-index: 11;
     box-shadow: 10px 10px 5px #eaeaea;
   }
+
   60% {
     transform: skewX(0deg) translateX(0) scale(0.95);
     width: 100%;
@@ -570,18 +633,19 @@ width: 100%;
     box-shadow: 10px 10px 5px #eaeaea;
   }
 
-  100% {
-  }
+  100% {}
 }
+
 @keyframes animClose {
-  0% {
-  }
+  0% {}
+
   40% {
     transform: skewX(5deg) translateX(0) scale(0.95);
     width: 100%;
     z-index: 11;
     box-shadow: 10px 10px 5px #eaeaea;
   }
+
   60% {
     transform: skewX(5deg) translateX(0) scale(0.95);
     width: 100%;
@@ -594,40 +658,46 @@ width: 100%;
     display: none;
   }
 }
+
 @keyframes modalAnimation {
   0% {
     transform: scaleY(0.3);
     left: -25%;
     top: -5%;
   }
+
   50% {
     transform: scaleY(0.6);
     left: -20%;
     top: -5%;
   }
-  100% {
-  }
+
+  100% {}
 }
+
 @keyframes width {
   0% {
     transform: translateX(-500%);
   }
-  50% {
-  }
-  60% {
-  }
+
+  50% {}
+
+  60% {}
+
   100% {
     transform: translateX(0);
   }
 }
+
 @keyframes projects {
-  0% {
-  }
+  0% {}
+
   100% {
     display: flex;
     justify-content: space-between;
   }
 }
+
 @keyframes flipAnimation {
   65% {
     backface-visibility: visible;
@@ -642,47 +712,58 @@ width: 100%;
     top: -6%;
   }
 }
+
 @keyframes width2 {
   0% {
     width: 0;
   }
+
   100% {
     width: 400px;
   }
 }
+
 @keyframes position {
   0% {
     position: absolute;
   }
+
   100% {
     position: relative;
   }
 }
+
 /*.modal2 {width: 100% ; height: 100%; position: absolute; left: 0; top: 0;  z-index: 100;} */
 @keyframes unfoldIn {
   0% {
     transform: scaleX(0) scaleY(0.005);
   }
+
   50% {
     /* 0.5 초간 세로 크기는 작은상태로 가로 너비만 확대  */
     transform: scaleX(1) scaleY(0.005);
   }
+
   100% {
     /* 0.5 초간 세로 크기를 확대 */
     transform: scaleY(1) scaleX(1);
   }
 }
+
 .modal2.out {
   transform: scale(1);
   animation: unfoldOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
 }
+
 @keyframes unfoldOut {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scaleX(1) scaleY(0.005);
   }
+
   100% {
     transform: scaleX(0) scaleY(0.005);
   }
@@ -753,32 +834,33 @@ width: 100%;
   left: 50%;
   top: 0;
   width: 70%;
-transform: translate(-50%);
+  transform: translate(-50%);
   height: 101%;
   background-size: cover;
- background: rgb(255, 255, 255);
+  background: rgb(255, 255, 255);
 }
 
 .projectModal.open {
-transform: translate(-50%);
+  transform: translate(-50%);
 
   display: block;
   z-index: 4;
-  animation: flip-out-hor-top 0.5s reverse;
+  animation: flip-out-hor-top3 0.5s;
 }
 
 .projectModal.open.out {
-  animation: flip-out-hor-top3 0.5s forwards reverse;
+  animation: flip-out-hor-top 0.5s forwards;
 }
-.projectModal img {
-}
+
+.projectModal img {}
+
 .projectReview {
   width: 70%;
   display: flex;
-  margin: auto;
+  margin-left: 3%;
   padding: 5% 2%;
   height: 100%;
-  background: rgba(255, 255, 254, 0.342) no-repeat;
+  background: transparent;
   color: black;
   font-size: 2rem;
   z-index: 1;
@@ -791,144 +873,164 @@ transform: translate(-50%);
     transform: translateY(0) translate(-50%);
     opacity: 1;
   }
+
   100% {
     -webkit-transform: translateY(-1000px) translate(-50%);
     transform: translateY(-1000px) translate(-50%);
     opacity: 0;
   }
 }
+
 @keyframes flip-out-hor-top3 {
   0% {
     -webkit-transform: translateY(-3000px) translate(-50%);
-    transform: translateY(-3000px translate(-50%);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(0px) translate(-50%);
-    transform: translateY(0px) translate(-50%);
-    opacity: 0;
-  }
-}
-@keyframes flip-out-hor-top2 {
-  0% {
-    -webkit-transform: translate(-50%) translateY(0);
-    transform: translate(-50%) translateY(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateX(-1500px);
-    transform: translateX(-1510px);
-    opacity: 0;
-    display: none;
-    z-index: -1;
-  }
-}
-#canvas {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-/* Contact */
-.modal3 .modal-front {
-  background-color: #9dd798;
-}
+    transform: translateY(-3000px) translate(-50%);
+        opacity: 0;
+    }
 
-.modal-contact {
-  height: 100%;
-}
-
-.contactWraps {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-.contactWrap {
-  position: relative;
-  width: 18%;
-  transform-style: preserve-3d;
-  transition: 1s;
-  transform: none;
-}
-.contactWrap.flip {
-  transform: rotateY(180deg);
-}
-
-.contactCard {
-  border-radius: 10px;
-  height: 650px;
-  position: relative;
-  transform-style: preserve-3d;
-  background: #f7f7f7;
-  border: solid rgb(0, 0, 0) 10px;
-  width: 100%;
-  transition: 1s;
-  z-index: 13;
-  transform: scaleX(-1);
-}
-.contactWrap:last-child > .contactCard {
-  background: #fff;
-}
-.contactWrap:last-child > .contactCard h3 {
-  margin-top: 140px;
-}
-
-.contactCard::before {
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-  content: "";
-  background: url(../img/card1.jpg) center center no-repeat;
-  background-size: cover;
-  z-index: 1;
-}
-a {
-  text-decoration: none;
-}
-.contactCard a {
-  display: block;
-  height: 100%;
-}
-.contactCard img {
-  width: 100%;
-  padding-top: 100px;
-}
-.contactCard h3 {
-  margin-top: 160px;
-  padding: 15px 0;
-  color: black;
-  border-top: 3px solid black;
-  border-bottom: 3px solid black;
-  font-family: sans-serif;
-
-  text-align: center;
-  font-size: 1.5rem;
-}
-.modal3.open {
-  animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-.modal3.out {
-  animation: slideDownLarge 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-}
-@keyframes blowUpModal {
-  0% {
-    transform: scale(0);
+    100% {
+      -webkit-transform: translateY(0px) translate(-50%);
+      transform: translateY(0px) translate(-50%);
+      opacity: 1;
+    }
   }
-  100% {
-    transform: scale(1);
+
+  @keyframes flip-out-hor-top2 {
+    0% {
+      -webkit-transform: translate(-50%) translateY(0);
+      transform: translate(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    100% {
+      -webkit-transform: translateX(-1500px);
+      transform: translateX(-1510px);
+      opacity: 0;
+      display: none;
+      z-index: -1;
+    }
   }
-}
-@keyframes slideDownLarge {
-0% {
-		transform: translateY(0);
-	}
-	100% {
-		transform: translateY(-100%);
-	}
-}
+
+  #canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Contact */
+  .modal3 .modal-front {
+    background-color: #9dd798;
+  }
+
+  .modal-contact {
+    height: 100%;
+  }
+
+  .contactWraps {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .contactWrap {
+    position: relative;
+    width: 18%;
+    transform-style: preserve-3d;
+    transition: 1s;
+    transform: none;
+  }
+
+  .contactWrap.flip {
+    transform: rotateY(180deg);
+  }
+
+  .contactCard {
+    border-radius: 10px;
+    height: 650px;
+    position: relative;
+    transform-style: preserve-3d;
+    background: #f7f7f7;
+    border: solid rgb(0, 0, 0) 10px;
+    width: 100%;
+    transition: 1s;
+    z-index: 13;
+    transform: scaleX(-1);
+  }
+
+  .contactWrap:last-child > .contactCard {
+    background: #fff;
+  }
+
+  .contactWrap:last-child > .contactCard h3 {
+    margin-top: 140px;
+  }
+
+  .contactCard::before {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    content: "";
+    background: url(../img/card1.jpg) center center no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .contactCard a {
+    display: block;
+    height: 100%;
+  }
+
+  .contactCard img {
+    width: 100%;
+    padding-top: 100px;
+  }
+
+  .contactCard h3 {
+    margin-top: 160px;
+    padding: 15px 0;
+    color: black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    font-family: sans-serif;
+
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .modal3.open {
+    animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+
+  .modal3.out {
+    animation: slideDownLarge 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+
+  @keyframes blowUpModal {
+    0% {
+      transform: scale(0);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes slideDownLarge {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: translateY(-100%);
+    }
+  }
