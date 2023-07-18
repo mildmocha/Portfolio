@@ -51,6 +51,7 @@ const closeBtns = document.querySelectorAll(".closeBtn");
 closeBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     modal.classList.add("out");
+    const modalContent = document.querySelectorAll(".projectModal");
 
     modal2.classList.add("out");
     setTimeout(() => {
@@ -58,7 +59,9 @@ closeBtns.forEach((btn) => {
         abc.classList.remove("flip");
       })
     }, 400)
-
+    modalContent.forEach((ab)=> {
+      ab.classList.add("out");
+    })
     modal3.classList.add("out");
     contactsFlip.forEach((abc) => {
       abc.classList.remove("flip");

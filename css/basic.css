@@ -259,7 +259,7 @@ button {
 
 .profileTxt span {
   font-family: 'MaruBuri';
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: black;
 }
 
@@ -273,6 +273,7 @@ button {
   text-align: left;
   font-weight: normal;
   width: 120%;
+
 }
 
 .profileAnswer span {}
@@ -392,7 +393,7 @@ button {
 
 .modal-project h1 {
   margin: 0;
-  padding: 4%;
+  padding-top: 4%;
   text-align: center;
 
 }
@@ -474,6 +475,24 @@ span {
   font-family: "MaruBuri-Regular";
   justify-content: space-between;
   padding: 0 1%;
+}
+
+.modal-project h2 {
+
+
+  padding-left: 0.5%;
+  margin-top: 20px;
+ margin-bottom: 1%; 
+ color: black;
+ font-size: 1.5rem;
+ font-family: "MaruBuri";
+ font-weight: bold;
+
+line-height: 1.5rem;
+
+}
+h2 i { padding-left: 3%;
+  color: rgb(0, 0, 0);
 }
 
 .projects .content {
@@ -570,6 +589,7 @@ span {
   flex-direction: column;
   justify-content: center;
   flex: 1;
+  font-size: 1.5rem;
 }
 
 .projectReview .reviewTxt>h1 {
@@ -855,7 +875,7 @@ span {
 .projectModal img {}
 
 .projectReview {
-  width: 70%;
+  width: 80%;
   display: flex;
   margin-left: 3%;
   padding: 5% 2%;
@@ -885,152 +905,152 @@ span {
   0% {
     -webkit-transform: translateY(-3000px) translate(-50%);
     transform: translateY(-3000px) translate(-50%);
-        opacity: 0;
-    }
-
-    100% {
-      -webkit-transform: translateY(0px) translate(-50%);
-      transform: translateY(0px) translate(-50%);
-      opacity: 1;
-    }
+    opacity: 0;
   }
 
-  @keyframes flip-out-hor-top2 {
-    0% {
-      -webkit-transform: translate(-50%) translateY(0);
-      transform: translate(-50%) translateY(0);
-      opacity: 1;
-    }
+  100% {
+    -webkit-transform: translateY(0px) translate(-50%);
+    transform: translateY(0px) translate(-50%);
+    opacity: 1;
+  }
+}
 
-    100% {
-      -webkit-transform: translateX(-1500px);
-      transform: translateX(-1510px);
-      opacity: 0;
-      display: none;
-      z-index: -1;
-    }
+@keyframes flip-out-hor-top2 {
+  0% {
+    -webkit-transform: translate(-50%) translateY(0);
+    transform: translate(-50%) translateY(0);
+    opacity: 1;
   }
 
-  #canvas {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+  100% {
+    -webkit-transform: translateX(-1500px);
+    transform: translateX(-1510px);
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+
+#canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Contact */
+.modal3 .modal-front {
+  background-color: #9dd798;
+}
+
+.modal-contact {
+  height: 100%;
+}
+
+.contactWraps {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contactWrap {
+  position: relative;
+  width: 18%;
+  transform-style: preserve-3d;
+  transition: 1s;
+  transform: none;
+}
+
+.contactWrap.flip {
+  transform: rotateY(180deg);
+}
+
+.contactCard {
+  border-radius: 10px;
+  height: 650px;
+  position: relative;
+  transform-style: preserve-3d;
+  background: #f7f7f7;
+  border: solid rgb(0, 0, 0) 10px;
+  width: 100%;
+  transition: 1s;
+  z-index: 13;
+  transform: scaleX(-1);
+}
+
+.contactWrap:last-child>.contactCard {
+  background: #fff;
+}
+
+.contactWrap:last-child>.contactCard h3 {
+  margin-top: 140px;
+}
+
+.contactCard::before {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  content: "";
+  background: url(../img/card1.jpg) center center no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contactCard a {
+  display: block;
+  height: 100%;
+}
+
+.contactCard img {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.contactCard h3 {
+  margin-top: 160px;
+  padding: 15px 0;
+  color: black;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  font-family: sans-serif;
+
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.modal3.open {
+  animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.modal3.out {
+  animation: slideDownLarge 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+@keyframes blowUpModal {
+  0% {
+    transform: scale(0);
   }
 
-  /* Contact */
-  .modal3 .modal-front {
-    background-color: #9dd798;
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDownLarge {
+  0% {
+    transform: translateY(0);
   }
 
-  .modal-contact {
-    height: 100%;
+  100% {
+    transform: translateY(-100%);
   }
-
-  .contactWraps {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  }
-
-  .contactWrap {
-    position: relative;
-    width: 18%;
-    transform-style: preserve-3d;
-    transition: 1s;
-    transform: none;
-  }
-
-  .contactWrap.flip {
-    transform: rotateY(180deg);
-  }
-
-  .contactCard {
-    border-radius: 10px;
-    height: 650px;
-    position: relative;
-    transform-style: preserve-3d;
-    background: #f7f7f7;
-    border: solid rgb(0, 0, 0) 10px;
-    width: 100%;
-    transition: 1s;
-    z-index: 13;
-    transform: scaleX(-1);
-  }
-
-  .contactWrap:last-child > .contactCard {
-    background: #fff;
-  }
-
-  .contactWrap:last-child > .contactCard h3 {
-    margin-top: 140px;
-  }
-
-  .contactCard::before {
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    content: "";
-    background: url(../img/card1.jpg) center center no-repeat;
-    background-size: cover;
-    z-index: 1;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .contactCard a {
-    display: block;
-    height: 100%;
-  }
-
-  .contactCard img {
-    width: 100%;
-    padding-top: 100px;
-  }
-
-  .contactCard h3 {
-    margin-top: 160px;
-    padding: 15px 0;
-    color: black;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
-    font-family: sans-serif;
-
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .modal3.open {
-    animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-  }
-
-  .modal3.out {
-    animation: slideDownLarge 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
-  }
-
-  @keyframes blowUpModal {
-    0% {
-      transform: scale(0);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes slideDownLarge {
-    0% {
-      transform: translateY(0);
-    }
-
-    100% {
-      transform: translateY(-100%);
-    }
-  }
+}
