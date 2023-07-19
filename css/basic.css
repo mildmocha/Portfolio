@@ -875,7 +875,7 @@ a {
     justify-content: space-between;
     height: 100%;
     padding: 0;
-    padding-top: 3%;
+    padding-top: 1%;
     flex-direction: column;
     width: 100%;
     margin-bottom: 3%;
@@ -1090,7 +1090,7 @@ a {
 }
 .contactWrap {
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 6%;
   width: 80%;
   height: 100%;
 }
