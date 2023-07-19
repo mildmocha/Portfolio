@@ -46,17 +46,17 @@
       left: 0%;
       top:0%;
       z-index: -20;
-      width: 200vw;
+      width: 100vw;
       height: 100vh;
       background: linear-gradient(to right, #111, #0e0f19);  
       overflow: hidden;
     }
     .sky {
-      width: 200%;
-      height: 200vw;
+      width: 300%;
+      height: 300vw;
       position: fixed;
-      top: 12%;
-      left: 20%;
+      top: 70%;
+      left: 35%;
       transform: translate(-50%, -50%);
       animation: moveStar 900s linear infinite;
     }
