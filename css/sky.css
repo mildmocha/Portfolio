@@ -39,3 +39,25 @@
       transform: translateY(-50%) translateX(-50%) rotate(360deg);
     }
   }
+
+  @media (max-width:380px) {
+    .backSky {
+      position: absolute;
+      left: 0%;
+      top:0%;
+      z-index: -20;
+      width: 200vw;
+      height: 100vh;
+      background: linear-gradient(to right, #111, #0e0f19);  
+      overflow: hidden;
+    }
+    .sky {
+      width: 200%;
+      height: 200vw;
+      position: fixed;
+      top: 12%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      animation: moveStar 900s linear infinite;
+    }
+  }
