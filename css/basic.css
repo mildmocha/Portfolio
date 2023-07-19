@@ -836,6 +836,10 @@ a {
     overflow: hidden;
   }
 
+  .modal.open.out {
+    animation: unfoldOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+
   .pf {
     overflow: hidden;
     width: 100%;
@@ -876,7 +880,10 @@ a {
     margin-bottom: 3%;
   }
 
-  .card:first-child {margin-top: 3%;}
+  .card:first-child {
+    margin-top: 3%;
+  }
+
   .card {
     margin-top: 7%;
     min-width: 100px;
@@ -914,14 +921,14 @@ a {
 
   .closeBtn {
     width: 10%;
-    left: 3%;
+    left: 1%;
     top: 2.3%;
     height: auto;
   }
 
   .modal-profile .closeBtn i {
     color: rgb(253, 253, 253);
-    font-size: 30px;
+    
   }
 
   .profile {
@@ -981,27 +988,131 @@ a {
     flex: 1;
   }
 
+  .skills h1 {
+    margin-top: 5%;
+  }
+
   .skill img {
-    margin-bottom: 20%;
-    margin-top: 20%;
+    margin-bottom: 40%;
+    margin-top: 30%;
+  }
+
+  .skillSub {
+    height: 90%;
   }
 
   .skillSub img {
-    width: 100%;
+    width: 110%;
   }
 
   .skillSub div div {
     height: 30%;
+
   }
+
+  .project-wrap {
+    margin-top: 5%;
+    overflow-y: auto;
+    /* 세로 스크롤을 생성합니다. */
+    height: 85%;
+    flex-direction: column;
+  }
+
+  .projectC {
+    width: 90%;
+    height: 20%;
+    margin-bottom: 15%;
+  }
+
+  .projects {
+    padding: 0;
+    height: 130%;
+  }
+
+  .prjects.content {
+    height: 85%;
+  }
+
+  .projects span {
+    height: auto;
+    padding: 0;
+
+  }
+
+  .projectModal {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .projectReview {
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+    padding: 5% 0;
+    margin: 0 auto;
+  }
+
+  .link {
+    width: 100%;
+    height: 40%;
+    margin: 0 auto;
+  }
+
+  .link img {
+    width: 100%;
+    margin: 0;
+  }
+  .reviewTxt {justify-content: start; margin-top: 5%;}
+.reviewTxt h1 {
+  font-size: 2rem; margin-top: 5%;
+}
+.projectReview .reviewTxt>P {
+    flex: 0;
+    font-size: 1rem;
+  }
+  .reviewTxt a {
+    width: 40%;
+}
+.backBtn {
+  right: -2.5%;
+  top: 0%;
+  width: 15%;
+  height: 5%;
+}
+.modal-contact{height: auto ;}
+.contactWraps{
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+  padding-top: 10%;
+}
+.contactWrap {
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 80%;
+  height: 100%;
+}
+.contactCard {
+  margin: auto;
+  height: 200px;
+  width: 95%;
+}
+
+.contactCard img {
+  height: 70%;
+  padding: 0;
+  object-fit: contain;
+}
+.contactWrap:first-child>.contactCard h3 {
+  margin-top: 0px;
+}
+.contactCard h3 {
+ margin: 0;
+ padding: 3% 0;
 }
 
 
-
-
-
-
-
-
+}
 
 
 
@@ -1056,8 +1167,9 @@ a {
     opacity: 0;
     z-index: -2;
   }
+
   100% {
-    transform:scale (1);
+    transform: scale (1);
     opacity: 0;
     z-index: -2;
   }
@@ -1111,7 +1223,9 @@ a {
 }
 
 @keyframes animClose {
-  0% {display: none;}
+  0% {
+    display: none;
+  }
 
   40% {
     transform: skewX(5deg) translateX(0) scale(0.95);
@@ -1130,7 +1244,7 @@ a {
   100% {
     transform: skewX(5deg) translateX(110%) scale(0.95);
     display: none;
-   z-index: 0;
+    z-index: 0;
   }
 }
 
