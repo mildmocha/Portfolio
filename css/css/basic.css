@@ -1,0 +1,1413 @@
+body {
+  font-family: "NanumSquare";
+  overflow: hidden;
+  background: rgba(9, 27, 54, 0.712);
+  margin: 0 10%;
+}
+
+.pf {
+  padding-bottom: 56.25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100%;
+  background: black;
+  color: white;
+  font-size: 50px;
+}
+
+
+
+.pf h4 {
+  position: absolute;
+  left: 50%;
+  bottom: 60%;
+  font-size: 2rem;
+  transform: translatex(-50%);
+  z-index: 2;
+  animation: twinkle 2s ease-in-out infinite forwards;
+}
+
+
+.pf video {
+  flex: 3;
+  z-index: -1;
+}
+
+.pf.open {
+  animation: fadeIn2 0.7s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+.card-container {
+  margin: 0;
+  padding: 20vh 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  z-index: 4;
+}
+
+.modal,
+.modal2,
+.modal3 {
+  display: none;
+  position: absolute;
+  z-index: 1100;
+
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.modal.open {
+  display: block;
+
+  animation: anim 1s ease-in-out forwards;
+}
+
+.modal.open.out {
+  animation: animClose 0.5s ease-out forwards;
+}
+
+.modal2.open {
+  animation: unfoldIn 0.5s ease-in-out forwards;
+}
+
+.modal.open,
+.modal2.open,
+.modal3.open {
+  display: block;
+}
+
+.card {
+  min-width: 275px;
+  width: 23%;
+  height: 600px;
+  position: relative;
+  perspective: 1000px;
+}
+
+.card-inner {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-front,
+.card-back {
+  border-radius: 10px;
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.card-front {
+  background: url(../img/card1.jpg) center center no-repeat;
+  background-size: cover;
+  background-color: #6b3a3a;
+}
+
+.card-front.open {
+  animation: flipAnimation 2.3s ease-in-out forwards;
+}
+
+.card-back {
+  border: solid 10px white;
+  border-radius: 10px;
+  background-color: #1b1919;
+  transform: rotateY(180deg);
+  z-index: 100;
+}
+
+.closeBtn {
+  border: none;
+  background: transparent;
+  position: absolute;
+  right: 6.5%;
+  top: 4%;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+
+.closeBtn i {
+  font-size: 50px;
+  color: white;
+}
+
+.backBtn {
+  border: none;
+  background: transparent;
+  position: absolute;
+  right: 4%;
+  top: 2%;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+
+.backBtn i {
+  font-size: 40px;
+
+}
+
+.modal-front {
+  background-size: cover;
+  background-color: #1b1919;
+  transform: rotateY(0deg);
+  height: 100%;
+}
+
+.modal-profile {
+  color: white;
+  position: relative;
+  width: 100%;
+  box-sizing: inherit;
+
+  height: 100%;
+  font-size: 3rem;
+  background: #201b1b;
+}
+
+.modal-profile span {
+  font-size: 2rem;
+  padding: 0;
+}
+
+.profileWrap {
+  display: flex;
+  background: #313131;
+  height: 100%;
+  width: 100%;
+
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.profile {
+  transform: none;
+  font-weight: bold;
+  text-align: center;
+  flex: 0.25;
+  height: 84%;
+  border-radius: 20px;
+  border: solid 5px rgb(252, 252, 252);
+  background: #ffffff;
+  padding: 1%;
+}
+
+.profileBg {
+  background: #c1d6e4;
+  height: 100%;
+  border-radius: 20px;
+  border: solid 3px black;
+}
+
+.profile h3 {
+  background: #ffffff;
+  color: black;
+  margin-top: 10%;
+  font-family: cursive;
+}
+
+.profile img {
+  display: inline-block;
+  margin-top: 5%;
+  width: 40%;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #fff;
+  border: solid 5px rgb(141, 200, 240);
+}
+
+.profileTxt {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  margin-top: 5%;
+  padding: 5% 0;
+  background: #ffffffb9;
+  height: 35%;
+  border-radius: 50px 50px 0 0;
+  border: 8px white solid;
+}
+
+.profileTxt span {
+  font-family: 'MaruBuri';
+  font-size: 1.5rem;
+  color: black;
+}
+
+.profileBase span {
+  width: 90%;
+
+  white-space: nowrap;
+}
+
+.profileAnswer {
+  text-align: left;
+  font-weight: normal;
+  width: 120%;
+
+}
+
+.profileAnswer span {}
+
+.profileSpace {
+  flex: 0.1;
+}
+
+.skills {
+  position: relative;
+  box-sizing: border-box;
+  margin-top: 0%;
+  height: 90%;
+  width: 100%;
+  flex: 0.6;
+}
+
+.skills h1 {
+  margin: 0;
+  margin-bottom: 3%;
+  border-bottom: 5px solid white;
+  padding: 0% 6%;
+  width: 130%;
+  z-index: 1;
+  position: relative;
+  font-size: 3rem;
+}
+
+.skill {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  align-items: start;
+  margin: 0 auto;
+  color: black;
+  text-align: center;
+}
+
+.skill div {
+  border-radius: 10px;
+  margin: 0 auto;
+  text-align: center;
+  height: 40%;
+  z-index: 1;
+  width: 70%;
+}
+
+.skill div div {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  height: 350px;
+  border-radius: 10px;
+  flex-direction: column;
+  background: white;
+  border: solid 10px rgb(253, 153, 3);
+}
+
+.skill img {
+  flex: 0.6;
+  width: 70%;
+  margin-top: 30%;
+}
+
+.skill span {
+  margin-bottom: 5%;
+  color: black;
+  font-family: cursive;
+  border-top: solid rgb(253, 153, 3) 2px;
+  border-bottom: solid rgb(253, 153, 3) 2px;
+  font-weight: bold;
+}
+
+.modal-project {
+  position: relative;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(4, 15, 34);
+  color: white;
+}
+
+.skillSub {
+  margin-top: 5%;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  height: 100%;
+}
+
+.skillSub div {
+  margin: 0 auto;
+  flex: 1;
+}
+
+.skillSub div div {
+  border: solid rgb(212, 197, 197) 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35%;
+  background: white;
+
+  width: 60%;
+  flex: 1;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.skillSub img {
+  width: 80%;
+}
+
+.modal-project h1 {
+  margin: 0;
+  font-size: 3rem;
+
+  line-height: 1;
+  padding-top: 4.5%;
+  padding-bottom: 4%;
+  text-align: center;
+
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front.flip {
+  transform: rotateY(180deg);
+}
+
+.projectC {
+  position: relative;
+  width: 18%;
+  transform-style: preserve-3d;
+  transition: 1s;
+  transform: none;
+}
+
+.projectC.flip {
+  transform: rotateY(180deg);
+}
+
+.projects {
+  border-radius: 10px;
+  height: 600px;
+  position: relative;
+  transform-style: preserve-3d;
+  background: #67656d;
+  border: solid white 10px;
+  width: 100%;
+  transition: 1s;
+  z-index: 13;
+  transform: scaleX(-1);
+}
+
+.projects span {
+  font-size: 1.1rem;
+  font-family: "NanumSquare";
+  background: #1b1919;
+  padding: 5% 0;
+  font-weight: bold;
+}
+
+.projects::before {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  content: "";
+  background: url(../img/card1.jpg) center center no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.projects>div {
+  height: 565px;
+}
+
+span {
+  z-index: 2;
+  width: 100%;
+
+  display: inline-block;
+  font-size: 1rem;
+  color: white;
+}
+
+.project-wrap {
+  display: flex;
+  flex-direction: low;
+  align-items: center;
+  z-index: 1;
+  font-family: "MaruBuri-Regular";
+  justify-content: space-between;
+  padding: 0 7%;
+}
+
+.modal-project h2 {
+
+
+  padding-left: 0.5%;
+  margin-top: 20px;
+  margin-bottom: 1%;
+  color: black;
+  font-size: 1.5rem;
+  font-family: "MaruBuri";
+  font-weight: bold;
+
+  line-height: 1.5rem;
+
+}
+
+h2 i {
+  padding-left: 3%;
+  color: rgb(0, 0, 0);
+}
+
+.projects .content {
+  box-sizing: border-box;
+  height: 90%;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInContent 1s ease-in-out forwards;
+}
+
+.content img {
+  box-sizing: border-box;
+
+  width: 100%;
+}
+
+
+.projects a {
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.projects img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.link {
+  width: 50%;
+  overflow: hidden;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  filter: drop-shadow(0px 0px 3px);
+}
+
+.link img {
+  width: 100%;
+  height: 100%;
+}
+
+.reviewTxt a {
+  margin-right: 2%;
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  background-color: #000000;
+  border-radius: 25px;
+  color: white;
+  z-index: 10;
+
+  width: 25%;
+  font-size: 1.6rem;
+  margin-top: 10px;
+  padding: 2% 1%;
+  text-decoration: none;
+}
+
+.reviewTxt a:hover {
+  background-color: #5c5c5c;
+}
+
+.reviewTxt {
+  margin-left: 3%;
+  height: 670px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  font-size: 1.5rem;
+}
+
+.projectReview .reviewTxt>h1 {
+  padding-bottom: 2%;
+  padding-top: 0;
+  padding-left: 5%;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  font-family: 'MaruBuri';
+  width: 100%;
+}
+
+.projectReview .reviewTxt>P {
+  padding: 0 5%;
+  color: rgb(0, 0, 0);
+  margin-top: 5%;
+  line-height: 2;
+  flex: 1.1;
+  font-family: 'MaruBuri';
+
+  font-weight: bold;
+
+}
+
+.projectImg {
+  margin: 0 5%;
+
+  object-fit: cover;
+  position: relative;
+}
+
+.link .megaboxImg {
+  background: black;
+  padding: 0 10%;
+  width: 65%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.linkURL {
+  display: flex;
+}
+
+.reactImg {}
+
+
+.modal2.out {
+  transform: scale(1);
+  animation: unfoldOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two");
+
+
+.container h1 {
+  font-size: 5rem;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+  color: #fcfbfb;
+
+}
+
+.container {
+  width: 50%;
+  position: absolute;
+  z-index: 0;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+
+}
+
+.pulse {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+}
+
+.pulse circle {
+  fill: #51ffd4;
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: 50% 50%;
+  animation: pulse 2s cubic-bezier(0.5, 0.5, 0, 1) infinite;
+}
+
+.pulse circle:nth-child(2) {
+  fill: #0059ff;
+  animation: pulse 2s 0.75s cubic-bezier(0.5, 0.5, 0, 1) infinite;
+}
+
+.pulse circle:nth-child(3) {
+  fill: #e100ff;
+  animation: pulse 2s 1.5s cubic-bezier(0.5, 0.5, 0, 1) infinite;
+}
+
+
+/*- ProjectModal*/
+.projectModal {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 70%;
+  transform: translate(-50%);
+  height: 101%;
+  background-size: cover;
+  background: rgb(255, 255, 255);
+}
+
+.projectModal.open {
+  transform: translate(-50%);
+
+  display: block;
+  z-index: 4;
+  animation: flip-out-hor-top3 0.5s;
+}
+
+.projectModal.open.out {
+  animation: flip-out-hor-top 0.5s forwards;
+}
+
+.projectModal img {}
+
+.projectReview {
+  width: 80%;
+  display: flex;
+  margin-left: 3%;
+  padding: 5% 2%;
+  height: 100%;
+  background: transparent;
+  color: black;
+  font-size: 2rem;
+  z-index: 1;
+}
+
+
+
+
+#canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Contact */
+.modal3 .modal-front {
+  background-color: #8173d8;
+}
+
+.modal-contact {
+  height: 100%;
+}
+
+.contactWraps {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contactWrap {
+  position: relative;
+  width: 18%;
+  transform-style: preserve-3d;
+  transition: 1s;
+  transform: none;
+}
+
+.contactWrap.flip {
+  transform: rotateY(180deg);
+}
+
+.contactCard {
+  border-radius: 10px;
+  height: 650px;
+  position: relative;
+  transform-style: preserve-3d;
+  background: #fff;
+
+  border: solid rgb(0, 0, 0) 10px;
+  width: 100%;
+  transition: 1s;
+  z-index: 13;
+  transform: scaleX(-1);
+}
+
+.contactWrap:first-child>.contactCard {
+  background: #f7f7f7;
+}
+
+.contactWrap:first-child>.contactCard h3 {
+  margin-top: 160px;
+}
+
+
+.contactCard::before {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  content: "";
+  background: url(../img/card1.jpg) center center no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contactCard a {
+  display: block;
+  height: 100%;
+}
+
+.contactCard img {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.contactCard h3 {
+  margin-top: 140px;
+  padding: 15px 0;
+  color: black;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  font-family: sans-serif;
+
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.modal3.open {
+  animation: blowUpModal 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.modal3.out {
+  animation: slideDownLarge 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* responsive */
+@media (max-width:420px) {
+  body {}
+
+
+
+  main {
+    overflow: hidden;
+  }
+
+  .modal.open.out {
+    animation: unfoldOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  }
+
+  .pf {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+    padding: 0;
+  }
+
+  .pf video {
+    height: 100%;
+  }
+
+  .container .pulse {
+    width: 100%;
+  }
+
+  .pf .container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    width: 100%;
+  }
+
+  main .pf h4 {
+    bottom: 20%;
+  }
+
+  .container {
+    height: 50%;
+    min-height: 0;
+  }
+
+  .card-container {
+    justify-content: space-between;
+    height: 100%;
+    padding: 0;
+    padding-top: 1%;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 3%;
+  }
+
+  .card:first-child {
+    margin-top: 3%;
+  }
+
+  .card {
+    margin-top: 7%;
+    min-width: 100px;
+    width: 100%;
+    height: 28vh;
+  }
+
+  .card-front {
+    background: none;
+  }
+
+  .profileWrap {
+    flex-direction: column;
+  }
+
+  .skill div div {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    height: 10%;
+    border-radius: 10px;
+    flex-direction: column;
+    background: white;
+    border: solid 10px rgb(253, 153, 3);
+  }
+
+  .modal-profile span {
+    font-size: 0.9rem;
+    padding: 0;
+
+  }
+
+  .closeBtn {
+    width: 10%;
+    left: 0%;
+    top: 2.3%;
+    height: auto;
+  }
+
+  .modal-profile .closeBtn i {
+    color: rgb(253, 253, 253);
+    
+  }
+
+  .profile {
+    height: 40%;
+    padding-bottom: 10px;
+    margin-top: 20%;
+  }
+
+  .profile h3 {
+    display: none;
+  }
+
+  .profileBg {
+    display: flex;
+    align-items: center;
+  }
+
+  .profile img {
+    width: 40%;
+    margin-top: 0;
+    height: 70%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .profileTxt {
+    padding: 5% 0;
+    width: 58%;
+    margin: 0;
+    height: 80%;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .profileTxt span {
+    vertical-align: top;
+    line-height: 0;
+  }
+
+  .profileAnswer {
+    height: 100%;
+  }
+
+  .profileBase {
+    height: 100%;
+  }
+
+  .profileBase span {
+    height: 10%;
+  }
+
+  .profileAnswer span {
+    white-space: nowrap;
+  }
+
+  .skills {
+    flex: 1;
+  }
+
+  .skills h1 {
+    margin-top: 5%;
+  }
+
+  .skill img {
+    margin-bottom: 40%;
+    margin-top: 30%;
+  }
+
+  .skillSub {
+    height: 90%;
+  }
+
+  .skillSub img {
+    width: 110%;
+  }
+
+  .skillSub div div {
+    height: 30%;
+
+  }
+
+  .project-wrap {
+    margin-top: 5%;
+    overflow-y: auto;
+    /* 세로 스크롤을 생성합니다. */
+    height: 85%;
+    flex-direction: column;
+  }
+
+  .projectC {
+    width: 90%;
+    height: 20%;
+    margin-bottom: 15%;
+  }
+
+  .projects {
+    padding: 0;
+    height: 130%;
+  }
+
+  .prjects.content {
+    height: 85%;
+  }
+
+  .projects span {
+    height: auto;
+    padding: 0;
+
+  }
+
+  .projectModal {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .projectReview {
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+    padding: 5% 0;
+    margin: 0 auto;
+  }
+
+  .link {
+    width: 100%;
+    height: 40%;
+    margin: 0 auto;
+  }
+
+  .link img {
+    width: 100%;
+    margin: 0;
+  }
+  .reviewTxt {justify-content: start; margin-top: 5%;}
+.reviewTxt h1 {
+  font-size: 2rem; margin-top: 5%;
+}
+.projectReview .reviewTxt>P {
+    flex: 0;
+    font-size: 1rem;
+  }
+  .reviewTxt a {
+    width: 40%;
+}
+.backBtn {
+  right: -2.5%;
+  top: 0%;
+  width: 15%;
+  height: 5%;
+}
+.modal-contact{height: auto ;}
+.contactWraps{
+  
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+  padding-top: 0%;
+}
+.contactWrap {
+  margin: 0 auto;
+  margin-top: 8%;
+  width: 80%;
+  height: 100%;
+}
+.contactCard {
+  margin: auto;
+  height: 200px;
+  width: 95%;
+}
+
+.contactCard img {
+  height: 70%;
+  padding: 0;
+  object-fit: contain;
+}
+.contactWrap:first-child{
+  margin-top: 3%;
+}
+.contactWrap:first-child>.contactCard h3 {
+  margin-top: 0px;
+}
+.contactCard h3 {
+ margin: 0;
+ padding: 3% 0;
+}
+
+
+}
+
+
+
+
+
+/*Animation*/
+
+@keyframes blowUpModal {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideDownLarge {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-120%);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0.1;
+
+  }
+
+}
+
+@keyframes fadeIn2 {
+  0% {
+    transform: translateZ(0) scale(1);
+    opacity: 1;
+  }
+
+  99% {
+    transform: translateZ(-1100px) translateY(20%) scale(2);
+    opacity: 0;
+    z-index: -2;
+  }
+
+  100% {
+    transform: scale (1);
+    opacity: 0;
+    z-index: -2;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInContent {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes anim {
+  0% {
+    z-index: 11;
+    transform: skewX(5deg) translateX(-100%) scale(0.95);
+  }
+
+  40% {
+    transform: skewX(5deg) translateX(0) scale(0.95);
+    width: 100%;
+    z-index: 11;
+    box-shadow: 10px 10px 5px #eaeaea;
+  }
+
+  60% {
+    transform: skewX(0deg) translateX(0) scale(0.95);
+    width: 100%;
+    z-index: 11;
+    box-shadow: 10px 10px 5px #eaeaea;
+  }
+
+  100% {}
+}
+
+@keyframes animClose {
+  0% {
+    display: none;
+  }
+
+  40% {
+    transform: skewX(5deg) translateX(0) scale(0.95);
+    width: 100%;
+    z-index: 11;
+    box-shadow: 10px 10px 5px #eaeaea;
+  }
+
+  60% {
+    transform: skewX(5deg) translateX(0) scale(0.95);
+    width: 100%;
+    z-index: 11;
+    box-shadow: 10px 10px 5px #eaeaea;
+  }
+
+  100% {
+    transform: skewX(5deg) translateX(110%) scale(0.95);
+    display: none;
+    z-index: 0;
+  }
+}
+
+@keyframes modalAnimation {
+  0% {
+    transform: scaleY(0.3);
+    left: -25%;
+    top: -5%;
+  }
+
+  50% {
+    transform: scaleY(0.6);
+    left: -20%;
+    top: -5%;
+  }
+
+  100% {}
+}
+
+@keyframes width {
+  0% {
+    transform: translateX(-500%);
+  }
+
+  50% {}
+
+  60% {}
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes projects {
+  0% {}
+
+  100% {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@keyframes flipAnimation {
+  65% {
+    backface-visibility: visible;
+
+    left: 0;
+    top: 0;
+  }
+
+  100% {
+    backface-visibility: visible;
+    left: -11%;
+    top: -6%;
+  }
+}
+
+@keyframes width2 {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 400px;
+  }
+}
+
+@keyframes position {
+  0% {
+    position: absolute;
+  }
+
+  100% {
+    position: relative;
+  }
+}
+
+/*.modal2 {width: 100% ; height: 100%; position: absolute; left: 0; top: 0;  z-index: 100;} */
+@keyframes unfoldIn {
+  0% {
+    transform: scaleX(0) scaleY(0.005);
+  }
+
+  50% {
+    /* 0.5 초간 세로 크기는 작은상태로 가로 너비만 확대  */
+    transform: scaleX(1) scaleY(0.005);
+  }
+
+  100% {
+    /* 0.5 초간 세로 크기를 확대 */
+    transform: scaleY(1) scaleX(1);
+  }
+}
+
+@keyframes pulse {
+  25% {
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes unfoldOut {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scaleX(1) scaleY(0.005);
+  }
+
+  100% {
+    transform: scaleX(0) scaleY(0.005);
+  }
+}
+
+@keyframes flip-out-hor-top {
+  0% {
+    -webkit-transform: translateY(0) translate(-50%);
+    transform: translateY(0) translate(-50%);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateY(-1000px) translate(-50%);
+    transform: translateY(-1000px) translate(-50%);
+    opacity: 0;
+  }
+}
+
+@keyframes flip-out-hor-top3 {
+  0% {
+    -webkit-transform: translateY(-3000px) translate(-50%);
+    transform: translateY(-3000px) translate(-50%);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0px) translate(-50%);
+    transform: translateY(0px) translate(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-out-hor-top2 {
+  0% {
+    -webkit-transform: translate(-50%) translateY(0);
+    transform: translate(-50%) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateX(-1500px);
+    transform: translateX(-1510px);
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}

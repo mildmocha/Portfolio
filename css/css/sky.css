@@ -1,0 +1,63 @@
+
+/* 배경 */
+.backSky {
+    position: absolute;
+    left: 0%;
+    top:0px;
+    z-index: -20;
+    width: 200vw;
+    height: 200vh;
+    background: linear-gradient(to right, #111, #0e0f19);  
+    overflow: hidden;
+  }
+  
+  /* 별을 감싼 부모 */
+  .sky {
+    width: 100vw;
+    height: 100vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveStar 900s linear infinite;
+  }
+  
+  /* 별 */
+  .sky .star {
+    fill: #fff;
+    stroke: none;
+    stroke-width: 0;
+  }
+  
+  /* 별 이동효과 */
+  @keyframes moveStar {
+    from {
+      transform: translateY(-50%) translateX(-50%) rotate(0deg);
+    }
+  
+    to {
+      transform: translateY(-50%) translateX(-50%) rotate(360deg);
+    }
+  }
+
+  @media (max-width:420px) {
+    .backSky {
+      position: absolute;
+      left: 0%;
+      top:0%;
+      z-index: -20;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(to right, #111, #0e0f19);  
+      overflow: hidden;
+    }
+    .sky {
+      width: 300%;
+      height: 300vw;
+      position: fixed;
+      top: 70%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      animation: moveStar 900s linear infinite;
+    }
+  }
