@@ -875,7 +875,7 @@ a {
     justify-content: space-between;
     height: 100%;
     padding: 0;
-    padding-top: 5%;
+    padding-top: 3%;
     flex-direction: column;
     width: 100%;
     margin-bottom: 3%;
@@ -922,7 +922,7 @@ a {
 
   .closeBtn {
     width: 10%;
-    left: 1%;
+    left: 0%;
     top: 2.3%;
     height: auto;
   }
@@ -1104,6 +1104,9 @@ a {
   height: 70%;
   padding: 0;
   object-fit: contain;
+}
+.contactWrap:first-child{
+  margin-top: 3%;
 }
 .contactWrap:first-child>.contactCard h3 {
   margin-top: 0px;
