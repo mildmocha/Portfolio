@@ -4,11 +4,11 @@
 개요
 ===
 <img src="https://res.cloudinary.com/yayayaya/image/upload/v1691926241/screencapture-jspf-netlify-app-2023-08-13-20_29_23_npbexu.png" />
-포트폴리오 페이지
+타로카드를 컨셉으로 만든 포트폴리오 페이지
 
 
 JS를 조금 첨가한<br>
-CSS 애니메이션 위주의 포트폴리오
+CSS 애니메이션 위주의 사이트
 
 
 
